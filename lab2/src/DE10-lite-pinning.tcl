@@ -66,6 +66,21 @@ set_location_assignment PIN_N19 -to hex5[5]
 set_location_assignment PIN_N20 -to hex5[6]
 set_location_assignment PIN_L19 -to hex5[7]
 
+#Toggle switches sw0
+set_location_assignment PIN_C10 -to sw[0]
+set_location_assignment PIN_C11 -to sw[1]
+set_location_assignment PIN_D12 -to sw[2]
+set_location_assignment PIN_C12 -to sw[3]
+set_location_assignment PIN_A12 -to sw[4]
+set_location_assignment PIN_B12 -to sw[5]
+set_location_assignment PIN_A13 -to sw[6]
+set_location_assignment PIN_A14 -to sw[7]
+set_location_assignment PIN_B14 -to sw[8]
+set_location_assignment PIN_F15 -to sw[9]
+
+#To avoid that the FPGA is driving an unintended value on pins that are not in use:
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+
 
 
 

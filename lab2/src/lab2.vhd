@@ -4,13 +4,19 @@ use ieee.std_logic_1164.all;
 
 entity lab2 is
 
-port (D    :in std_logic_vector  (3 downto 0); 
+port (sw    :in std_logic_vector  (9 downto 0); 
+	
+
+      
       hex0 :out std_logic_vector (6 downto 0);---led0
 		hex1 :out std_logic_vector (6 downto 0);---led1
 		hex2 :out std_logic_vector (6 downto 0);---led2
       hex3 :out std_logic_vector (6 downto 0);---led3
 		hex4 :out std_logic_vector (6 downto 0);---led4
-		hex5 :out std_logic_vector (6 downto 0)	---led5	
+		hex5 :out std_logic_vector (6 downto 0) ---led5
+	  
+    
+		
 		);
 
 end lab2;
@@ -20,67 +26,24 @@ architecture behavior of lab2 is
 
 begin
 
-hex0 <=  "1000000" when D="0000" else  
-         "1111001" when D="0001" else  --1
-         "0100100" when D="0010" else  --2
-         "0110000" when D="0011" else  --3
-         "0011001" when D="0100" else  --4
-         "0010010" when D="0101" else  --5
-         "0000010" when D="0110" else  --6
-         "1111000" when D="0111" else  --7
-         "0000000" when D="1000" else  --8
-         "0010000" ;                   --9
+ 
+
+	 with sw(3 downto 0) select 
+
+
+hex0 <=  "1000000" when "0000" ,  --0
+         "1111001" when "0001" ,  --1
+         "0100100" when "0010" ,  --2
+         "0110000" when "0011" ,  --3
+         "0011001" when "0100" ,  --4
+         "0010010" when "0101" ,  --5
+         "0000010" when "0110" ,  --6
+         "1111000" when "0111" ,  --7
+         "0000000" when "1000" ,  --8
+         "0010000" when "1001";   --9  
+        		
 			
-hex1 <=  "1000000" when D="0000" else  --0
-         "1111001" when D="0001" else  --1
-         "0100100" when D="0010" else  --2
-         "0110000" when D="0011" else  --3
-         "0011001" when D="0100" else  --4
-         "0010010" when D="0101" else  --5
-         "0000010" when D="0110" else  --6
-         "1111000" when D="0111" else  --7
-         "0000000" when D="1000" else  --8
-         "0010000" ; 
-hex2 <= "1000000"  when D="0000" else  
-         "1111001" when D="0001" else  
-         "0100100" when D="0010" else  
-         "0110000" when D="0011" else  
-         "0011001" when D="0100" else 
-         "0010010" when D="0101" else 
-         "0000010" when D="0110" else  
-         "1111000" when D="0111" else 
-         "0000000" when D="1000" else  
-         "0010000" ; 
-hex3	<= "1000000" when D="0000" else  
-         "1111001" when D="0001" else  
-         "0100100" when D="0010" else  
-         "0110000" when D="0011" else  
-         "0011001" when D="0100" else  
-         "0010010" when D="0101" else 
-         "0000010" when D="0110" else  
-         "1111000" when D="0111" else  
-         "0000000" when D="1000" else  
-         "0010000" ; 
-hex4  <= "1000000" when D="0000" else  
-         "1111001" when D="0001" else  
-         "0100100" when D="0010" else  
-         "0110000" when D="0011" else  
-         "0011001" when D="0100" else  
-         "0010010" when D="0101" else  
-         "0000010" when D="0110" else  
-         "1111000" when D="0111" else  
-         "0000000" when D="1000" else  
-         "0010000" ; 
-hex5  <= "1000000" when D="0000" else  
-         "1111001" when D="0001" else  
-         "0100100" when D="0010" else  
-         "0110000" when D="0011" else  
-         "0011001" when D="0100" else  
-         "0010010" when D="0101" else  
-         "0000010" when D="0110" else  
-         "1111000" when D="0111" else  
-         "0000000" when D="1000" else  
-         "0010000" ; 
+
 			
 			
 			
