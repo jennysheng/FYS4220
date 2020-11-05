@@ -2,6 +2,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
 
 entity lab3 is
 
@@ -16,13 +17,14 @@ end lab3;
 
 
 architecture top_level of lab3 is
-	signal counter : std_logic_vector(3 downto 0):="0000";
+	signal counter : unsigned(3 downto 0):="0000";
+	
 
 begin
 	label_counter: process(key0, key1, clk)	
 	begin
     
-	if(key1='1') then---  reset
+	if(key1='1') then
 	counter <="0000";
 	elsif(key0'event and key0='1') then
 	if rising_edge(clk) then
@@ -37,7 +39,7 @@ end process;
 
  
 
-with counter select 
+With counter select
 
 
 
@@ -50,7 +52,15 @@ hex0 <=  "1000000" when "0000" ,  --0
          "0000010" when "0110" ,  --6
          "1111000" when "0111" ,  --7
          "0000000" when "1000" ,  --8
-         "0010000" when "1001" ;  --9  
+         "0010000" when "1001" , --9  
+			"1111001" when others;
+			
+			
+			
+			
+			
+			
+			
 	
 end architecture  top_level ;
 			

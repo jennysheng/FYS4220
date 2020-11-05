@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab3
-Thu Nov 05 11:11:30 2020
+Thu Nov 05 18:08:56 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Nov 05 11:11:30 2020           ;
+; Analysis & Synthesis Status        ; Failed - Thu Nov 05 18:08:56 2020           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab3                                        ;
 ; Top-level Entity Name              ; lab3                                        ;
@@ -163,18 +163,29 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 05 11:11:18 2020
+    Info: Processing started: Thu Nov 05 18:08:44 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3 -c lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file src/lab3.vhd
-    Info (12022): Found design unit 1: lab3-top_level File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 18
-    Info (12023): Found entity 1: lab3 File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 6
-Error (10327): VHDL error at lab3.vhd(29): can't determine definition of operator ""+"" -- found 0 possible definitions File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 29
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4782 megabytes
-    Error: Processing ended: Thu Nov 05 11:11:30 2020
+    Info (12022): Found design unit 1: lab3-top_level File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 19
+    Info (12023): Found entity 1: lab3 File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 7
+Info (12127): Elaborating entity "lab3" for the top level hierarchy
+Error (10821): HDL error at lab3.vhd(27): can't infer register for "counter[0]" because its behavior does not match any supported register model File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 27
+Info (10041): Inferred latch for "counter[0]" at lab3.vhd(24) File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 24
+Error (10821): HDL error at lab3.vhd(27): can't infer register for "counter[1]" because its behavior does not match any supported register model File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 27
+Info (10041): Inferred latch for "counter[1]" at lab3.vhd(24) File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 24
+Error (10821): HDL error at lab3.vhd(27): can't infer register for "counter[2]" because its behavior does not match any supported register model File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 27
+Info (10041): Inferred latch for "counter[2]" at lab3.vhd(24) File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 24
+Error (10821): HDL error at lab3.vhd(27): can't infer register for "counter[3]" because its behavior does not match any supported register model File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 27
+Info (10041): Inferred latch for "counter[3]" at lab3.vhd(24) File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 24
+Error (10822): HDL error at lab3.vhd(29): couldn't implement registers for assignments on this clock edge File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 29
+Error (10822): HDL error at lab3.vhd(30): couldn't implement registers for assignments on this clock edge File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 30
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 7 errors, 1 warning
+    Error: Peak virtual memory: 4786 megabytes
+    Error: Processing ended: Thu Nov 05 18:08:56 2020
     Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:23
+    Error: Total CPU time (on all processors): 00:00:24
 
 
