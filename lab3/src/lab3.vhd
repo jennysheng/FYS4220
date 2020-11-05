@@ -1,68 +1,56 @@
 --Library and package part
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
 use ieee.std_logic_unsigned.all;
 
 entity lab3 is
 
+
 port (
-	   key0:in std_logic;----start counter
-		clk: in std_logic;
+	   key0:in std_logic;----start counter	
 		key1:in std_logic;----reset counter
-      hex0 :out std_logic_vector (6 downto 0)---led0 		
+		clk: in std_logic;----clock
+		TC:  out std_logic;----count period
+		hex0 :out std_logic_vector (6 downto 0)---led0 		
 		);
 end lab3;
 
 
 
 architecture top_level of lab3 is
-	signal counter : unsigned(3 downto 0):="0000";
-	
-
+   
+ signal TC_PRE_TO_S_COUNTER:std_logic:=(others=>'0');
+ signal Count_out_to_output:std_logic_vector(5 downto 0 ):=(others=>'0');
 begin
-	label_counter: process(key0, key1, clk)	
-	begin
-    
-	if(key1='1') then
-	counter <="0000";
-	elsif(key0'event and key0='1') then
-	if rising_edge(clk) then
-      counter <= counter+1;
-		end if;
-		
 
-end if;
-
-
-end process;
-
- 
-
-With counter select
-
-
-
-hex0 <=  "1000000" when "0000" ,  --0
-         "1111001" when "0001" ,  --1
-         "0100100" when "0010" ,  --2
-         "0110000" when "0011" ,  --3
-         "0011001" when "0100" ,  --4
-         "0010010" when "0101" ,  --5
-         "0000010" when "0110" ,  --6
-         "1111000" when "0111" ,  --7
-         "0000000" when "1000" ,  --8
-         "0010000" when "1001" , --9  
-			"1111001" when others;
+			Prescaler: entity.work.bigClock
+			GENERIC MAP(TC=> 500000000,
+			N_BITS=>26)
+			PORT MAP(
+			clk=>clk,
+			key0=>'1',
+			key1=>key1,
+			TC=>TC_PRE_TO_S_COUNTER,
+			hex0=>open
+			);
 			
 			
 			
 			
-			
+			Counter_60_s: entity.work.bigClock
+			GENERIC MAP(TC=> 60,
+			N_BITS=>6)
+			PORT MAP(
+			clk=>clk,
+			key0=>TC_PRE_TO_S_COUNTER,
+			key1=>key1,
+			TC=>open,
+			hex0=>Count_out_to_output,
+			);
 			
 			
 	
-end architecture  top_level ;
+end  top_level ;
 			
 
 
