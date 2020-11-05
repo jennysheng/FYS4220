@@ -18,14 +18,14 @@
 #
 # Quartus Prime
 # Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-# Date created = 19:54:02  October 26, 2020
+# Date created = 10:47:56  November 05, 2020
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		lab2_assignment_defaults.qdf
+#		lab3_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -38,14 +38,17 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
-set_global_assignment -name TOP_LEVEL_ENTITY lab2
+set_global_assignment -name TOP_LEVEL_ENTITY lab3
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:54:02  OCTOBER 26, 2020"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:47:56  NOVEMBER 05, 2020"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name VHDL_FILE src/lab3.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_C14 -to hex0[0]
 set_location_assignment PIN_E15 -to hex0[1]
 set_location_assignment PIN_C15 -to hex0[2]
@@ -70,17 +73,14 @@ set_location_assignment PIN_B21 -to hex2[4]
 set_location_assignment PIN_C22 -to hex2[5]
 set_location_assignment PIN_B22 -to hex2[6]
 set_location_assignment PIN_A19 -to hex2[7]
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_F21 -to hex3[0]
 set_location_assignment PIN_E22 -to hex3[1]
 set_location_assignment PIN_E21 -to hex3[2]
 set_location_assignment PIN_C19 -to hex3[3]
 set_location_assignment PIN_C20 -to hex3[4]
 set_location_assignment PIN_D19 -to hex3[5]
+set_location_assignment PIN_E17 -to hex3[6]
+set_location_assignment PIN_D22 -to hex3[7]
 set_location_assignment PIN_F18 -to hex4[0]
 set_location_assignment PIN_E20 -to hex4[1]
 set_location_assignment PIN_E19 -to hex4[2]
@@ -95,12 +95,8 @@ set_location_assignment PIN_L18 -to hex5[2]
 set_location_assignment PIN_N18 -to hex5[3]
 set_location_assignment PIN_M20 -to hex5[4]
 set_location_assignment PIN_N19 -to hex5[5]
-set_location_assignment PIN_L19 -to hex5[7]
-set_global_assignment -name VHDL_FILE src/lab2.vhd
-set_global_assignment -name TCL_SCRIPT_FILE "src/DE10-lite-pinning.tcl"
-set_location_assignment PIN_E17 -to hex3[6]
-set_location_assignment PIN_D22 -to hex3[7]
 set_location_assignment PIN_N20 -to hex5[6]
+set_location_assignment PIN_L19 -to hex5[7]
 set_location_assignment PIN_C10 -to sw[0]
 set_location_assignment PIN_C11 -to sw[1]
 set_location_assignment PIN_D12 -to sw[2]
@@ -111,6 +107,11 @@ set_location_assignment PIN_A13 -to sw[6]
 set_location_assignment PIN_A14 -to sw[7]
 set_location_assignment PIN_B14 -to sw[8]
 set_location_assignment PIN_F15 -to sw[9]
+set_location_assignment PIN_B8 -to key0
+set_location_assignment PIN_A7 -to key1
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

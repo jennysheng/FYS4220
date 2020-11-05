@@ -28,7 +28,7 @@ begin
 
  
 
-	 with sw(3 downto 0) select 
+	 With sw(3 downto 0) Select 
 
 
 hex0 <=  "1000000" when "0000" ,  --0

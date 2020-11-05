@@ -1,5 +1,5 @@
-Analysis & Synthesis report for lab2
-Tue Nov 03 16:22:17 2020
+Analysis & Synthesis report for lab3
+Thu Nov 05 11:11:30 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,10 +36,10 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Nov 03 16:22:17 2020           ;
+; Analysis & Synthesis Status        ; Failed - Thu Nov 05 11:11:30 2020           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                      ; lab2                                        ;
-; Top-level Entity Name              ; lab2                                        ;
+; Revision Name                      ; lab3                                        ;
+; Top-level Entity Name              ; lab3                                        ;
 ; Family                             ; MAX 10                                      ;
 ; Total logic elements               ; N/A until Partition Merge                   ;
 ;     Total combinational functions  ; N/A until Partition Merge                   ;
@@ -61,7 +61,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; lab2               ; lab2               ;
+; Top-level entity name                                            ; lab3               ; lab3               ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -163,25 +163,18 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 03 16:22:06 2020
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab2 -c lab2
+    Info: Processing started: Thu Nov 05 11:11:18 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3 -c lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file src/lab2.vhd
-    Info (12022): Found design unit 1: lab2-behavior File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab2/src/lab2.vhd Line: 25
-    Info (12023): Found entity 1: lab2 File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab2/src/lab2.vhd Line: 5
-Info (12127): Elaborating entity "lab2" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at lab2.vhd(12): used implicit default value for signal "hex1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab2/src/lab2.vhd Line: 12
-Warning (10541): VHDL Signal Declaration warning at lab2.vhd(13): used implicit default value for signal "hex2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab2/src/lab2.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at lab2.vhd(14): used implicit default value for signal "hex3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab2/src/lab2.vhd Line: 14
-Warning (10541): VHDL Signal Declaration warning at lab2.vhd(15): used implicit default value for signal "hex4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab2/src/lab2.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at lab2.vhd(16): used implicit default value for signal "hex5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab2/src/lab2.vhd Line: 16
-Error (10313): VHDL Case Statement error at lab2.vhd(31): Case Statement choices must cover all possible values of expression File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab2/src/lab2.vhd Line: 31
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 6 warnings
-    Error: Peak virtual memory: 4781 megabytes
-    Error: Processing ended: Tue Nov 03 16:22:17 2020
-    Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:24
+Info (12021): Found 2 design units, including 1 entities, in source file src/lab3.vhd
+    Info (12022): Found design unit 1: lab3-top_level File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 18
+    Info (12023): Found entity 1: lab3 File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 6
+Error (10327): VHDL error at lab3.vhd(29): can't determine definition of operator ""+"" -- found 0 possible definitions File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd Line: 29
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 4782 megabytes
+    Error: Processing ended: Thu Nov 05 11:11:30 2020
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:23
 
 
