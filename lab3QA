@@ -1,0 +1,32 @@
+a) Which package is available in VHDL to arithmetic operations?
+   IEEE.numeric_std.all;
+
+b) What is the purpose of the process sensitivity list?
+sensitivity list includes  synchrnous signal that may  trigger a process or resume a process.
+
+
+c) Why should an asynchronous reset signal be listed in the sentivitiy list and why should a synchronous rest signal not be listed?
+the reset button key0 is a asychronous reset, it doesn't detect the rising edge when we press it.
+
+d) What is the standard method to check the behaviour of an HDL description?
+test bench
+
+e) Why is the entity description of a test bench empty?
+This is because the test bench itself does not have any inputs or outputs. Test vectors are generated and applied to the unit under test within the test bench.
+
+f) How can you model a 10 MHz clock signal in a VHDL test bench?
+time analyser, create new sdc file and define the period to be 100ns.
+
+g) Why does the stimuli process of a basic test bench not have a sensitivity list?
+
+
+h) Why do you need to disable a the clock at the end of the stimuli process in the test bench?
+
+i) Why can the wait for and wait statements not be synthesized?
+
+j) Can you think of a reason why for the first part of the simulation the value of the counter signal in figure 76 is 'U'? Was this the case for your simulation results?
+
+k) What does this 'U' mean and how could you avoid it?
+
+l) What happens when you press the push button KEY1 to start the counter, and can you explain why this happens?
+
