@@ -1,0 +1,20 @@
+C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/src/lab3.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity lab3
+-- Compiling architecture top_level of lab3
+
+} {} {}} C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/tb/lab3_tb.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/tb/lab3_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity lab1_tb
+-- Compiling architecture testbench of lab1_tb
+** Warning: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/lab3/tb/lab3_tb.vhd(58): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
+
+} {} {}}

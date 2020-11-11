@@ -1,0 +1,43 @@
+|lab3
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => int_ena_n_rrr.CLK
+clk => int_ena_n_rr.CLK
+clk => int_ena_n_r.CLK
+clk => rst_n.CLK
+clk => arst_n_r.CLK
+arst_n => rst_n.ACLR
+arst_n => arst_n_r.ACLR
+ext_ena_n => int_ena_n_r.DATAIN
+led[0] << sw[0].DB_MAX_OUTPUT_PORT_TYPE
+led[1] << sw[1].DB_MAX_OUTPUT_PORT_TYPE
+led[2] << sw[2].DB_MAX_OUTPUT_PORT_TYPE
+led[3] << sw[3].DB_MAX_OUTPUT_PORT_TYPE
+led[4] << sw[4].DB_MAX_OUTPUT_PORT_TYPE
+led[5] << sw[5].DB_MAX_OUTPUT_PORT_TYPE
+led[6] << sw[6].DB_MAX_OUTPUT_PORT_TYPE
+led[7] << sw[7].DB_MAX_OUTPUT_PORT_TYPE
+led[8] << sw[8].DB_MAX_OUTPUT_PORT_TYPE
+led[9] << sw[9].DB_MAX_OUTPUT_PORT_TYPE
+sw[0] => led[0].DATAIN
+sw[1] => led[1].DATAIN
+sw[2] => led[2].DATAIN
+sw[3] => led[3].DATAIN
+sw[4] => led[4].DATAIN
+sw[5] => led[5].DATAIN
+sw[6] => led[6].DATAIN
+sw[7] => led[7].DATAIN
+sw[8] => led[8].DATAIN
+sw[9] => led[9].DATAIN
+hex0[0] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+hex0[1] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+hex0[2] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+hex0[3] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+hex0[4] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+hex0[5] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+hex0[6] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+hex0[7] << <GND>
+
+

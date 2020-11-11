@@ -78,9 +78,11 @@ set_location_assignment PIN_A14 -to sw[7]
 set_location_assignment PIN_B14 -to sw[8]
 set_location_assignment PIN_F15 -to sw[9]
 
-#Toggle push button
-set_location_assignment PIN_B8 -to key0
-set_location_assignment PIN_A7 -to key1
+#Toggle push button key0 is reset and key1 is enable
+set_location_assignment PIN_B8 -to arst_n
+set_location_assignment PIN_A7 -to ext_ena_n
+#50MHz clock MAX10_CLK1_50
+set_location_assignment PIN_P11 -to clk
 
 #To avoid that the FPGA is driving an unintended value on pins that are not in use:
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"

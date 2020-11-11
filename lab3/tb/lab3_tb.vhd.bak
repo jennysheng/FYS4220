@@ -1,0 +1,59 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity lab1_tb is
+end;
+
+architecture testbench of lab3_tb is
+
+  -- Signal declarations
+  -- The clk related signals is provided as an example
+  signal clk          : std_logic;
+  signal clk_ena      : boolean;
+  constant clk_period : time := 20 ns;  -- 50 MHz
+  -- Declare all the remaining required top level signals.
+
+
+
+  -- Component declarations
+  -- Declare the component to be tested.
+
+begin
+
+  -- Instantiate the port map for the unit under test.
+  -- Keep the label name UUT
+  UUT :
+
+
+  -- create a 50 MHz clock
+  -- The clk signal can be disabled or enabled by the clk_ena signal
+  clk <= not clk after clk_period/2 when clk_ena else '0';
+
+
+  -- Write the stimuli process
+
+  stimuli_process : process
+  begin
+    -- set default values
+
+    -- enable clk and wait for 3 clk periods
+
+    -- assert arst_n for 3 clk periods
+
+    -- deassert arst_n for 3 clk periods
+
+    -- enable counter and wait for 20 clk_periods
+
+    -- disable counter and wait for 5 clk_periods
+
+    -- assert arst_n for 3 clk periods
+
+    -- deassert arst_n for 10 clk periods
+
+    -- disable clk
+
+    -- end of simulation
+    -- wait;
+  end process stimuli_process;
+end architecture testbench;
