@@ -18,15 +18,21 @@ f) How can you model a 10 MHz clock signal in a VHDL test bench?
 time analyser, create new sdc file and define the period to be 100ns.
 
 g) Why does the stimuli process of a basic test bench not have a sensitivity list?
+because it is syschronous, the clk will controll the process.
 
 
 h) Why do you need to disable a the clock at the end of the stimuli process in the test bench?
+to stop running the process.
 
 i) Why can the wait for and wait statements not be synthesized?
+because it replace the sensitivity list, it stops a synchronous process.
 
 j) Can you think of a reason why for the first part of the simulation the value of the counter signal in figure 76 is 'U'? Was this the case for your simulation results?
+yes, the counter is not initialized until a reset signal come.
 
 k) What does this 'U' mean and how could you avoid it?
+because the counter value is undefined. we need to signal counter: std_logic_vector(3 downto 0:='0000';
 
 l) What happens when you press the push button KEY1 to start the counter, and can you explain why this happens?
 
+without edge detection the key1 kan push a lot of clock cycles which cause the number just very fast, after the edge detection , the number will increment one by one.
