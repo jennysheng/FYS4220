@@ -1,0 +1,21 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "clk_ena",
+					"strict" : false
+				},
+				{
+					"name" : "arst_n",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

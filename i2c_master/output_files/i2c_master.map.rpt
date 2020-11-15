@@ -1,0 +1,372 @@
+Analysis & Synthesis report for i2c_master
+Sun Nov 15 21:56:33 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |i2c_master
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Nov 15 21:56:33 2020       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; i2c_master                                  ;
+; Top-level Entity Name              ; i2c_master                                  ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 1                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 1                                           ;
+; Total registers                    ; 1                                           ;
+; Total pins                         ; 34                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; i2c_master         ; i2c_master         ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+; src/i2c_master.vhd               ; yes             ; User VHDL File  ; C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 1          ;
+;                                             ;            ;
+; Total combinational functions               ; 0          ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 0          ;
+;     -- 3 input functions                    ; 0          ;
+;     -- <=2 input functions                  ; 0          ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 0          ;
+;     -- arithmetic mode                      ; 0          ;
+;                                             ;            ;
+; Total registers                             ; 1          ;
+;     -- Dedicated logic registers            ; 1          ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 34         ;
+;                                             ;            ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; sda~output ;
+; Maximum fan-out                             ; 1          ;
+; Total fan-out                               ; 41         ;
+; Average fan-out                             ; 0.56       ;
++---------------------------------------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |i2c_master                ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 34   ; 0            ; 0          ; |i2c_master         ; i2c_master  ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; scl~reg0                               ; Stuck at VCC due to stuck port data_in ;
+; \p_sclk:cnt[0..11]                     ; Lost fanout                            ;
+; Total Number of Removed Registers = 13 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                 ;
++---------------+---------------------------+---------------------------------------------------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register                                          ;
++---------------+---------------------------+---------------------------------------------------------------------------------+
+; scl~reg0      ; Stuck at VCC              ; \p_sclk:cnt[0], \p_sclk:cnt[1], \p_sclk:cnt[2], \p_sclk:cnt[3], \p_sclk:cnt[4], ;
+;               ; due to stuck port data_in ; \p_sclk:cnt[5], \p_sclk:cnt[6], \p_sclk:cnt[7], \p_sclk:cnt[8], \p_sclk:cnt[9], ;
+;               ;                           ; \p_sclk:cnt[10], \p_sclk:cnt[11]                                                ;
++---------------+---------------------------+---------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 1     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |i2c_master ;
++----------------+----------+------------------------------------------------+
+; Parameter Name ; Value    ; Type                                           ;
++----------------+----------+------------------------------------------------+
+; GC_SYSTEM_fre  ; 50000000 ; Signed Integer                                 ;
+; GC_I2C_fre     ; 20000    ; Signed Integer                                 ;
++----------------+----------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 34                          ;
+; cycloneiii_ff         ; 1                           ;
+;     CLR               ; 1                           ;
+; cycloneiii_io_obuf    ; 4                           ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sun Nov 15 21:56:21 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off i2c_master -c i2c_master
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file tb/i2c_master_tb.vhd
+    Info (12022): Found design unit 1: i2c_master_tb-tb File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/tb/i2c_master_tb.vhd Line: 7
+    Info (12023): Found entity 1: i2c_master_tb File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/tb/i2c_master_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file src/i2c_master.vhd
+    Info (12022): Found design unit 1: i2c_master-logic File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 30
+    Info (12023): Found entity 1: i2c_master File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 4
+Info (12127): Elaborating entity "i2c_master" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at i2c_master.vhd(42): used explicit default value for signal "scl_clk" because signal was never assigned a value File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 42
+Warning (10873): Using initial value X (don't care) for net "state_ena" at i2c_master.vhd(24) File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 24
+Warning (10873): Using initial value X (don't care) for net "scl_high_ena" at i2c_master.vhd(25) File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 25
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "clk_ena" and its non-tri-state driver. File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 13
+    Warning (13035): Inserted always-enabled tri-state buffer between "scl" and its non-tri-state driver. File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 23
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "clk" has no driver File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 12
+    Warning (13040): bidirectional pin "sda" has no driver File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 22
+Info (13060): One or more bidirectional pins are fed by always enabled tri-state buffers
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "scl" is moved to its source File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 23
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "clk_ena~synth" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 13
+    Warning (13010): Node "scl~synth" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 23
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "state_ena" is stuck at GND File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 24
+    Warning (13410): Pin "scl_high_ena" is stuck at GND File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 25
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 12 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 27 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "valid" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 15
+    Warning (15610): No output dependent on input pin "addr[0]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 16
+    Warning (15610): No output dependent on input pin "addr[1]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 16
+    Warning (15610): No output dependent on input pin "addr[2]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 16
+    Warning (15610): No output dependent on input pin "addr[3]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 16
+    Warning (15610): No output dependent on input pin "addr[4]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 16
+    Warning (15610): No output dependent on input pin "addr[5]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 16
+    Warning (15610): No output dependent on input pin "addr[6]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 16
+    Warning (15610): No output dependent on input pin "rnw" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 17
+    Warning (15610): No output dependent on input pin "data_wr[0]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 18
+    Warning (15610): No output dependent on input pin "data_wr[1]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 18
+    Warning (15610): No output dependent on input pin "data_wr[2]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 18
+    Warning (15610): No output dependent on input pin "data_wr[3]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 18
+    Warning (15610): No output dependent on input pin "data_wr[4]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 18
+    Warning (15610): No output dependent on input pin "data_wr[5]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 18
+    Warning (15610): No output dependent on input pin "data_wr[6]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 18
+    Warning (15610): No output dependent on input pin "data_wr[7]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 18
+    Warning (15610): No output dependent on input pin "data_rd[0]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 19
+    Warning (15610): No output dependent on input pin "data_rd[1]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 19
+    Warning (15610): No output dependent on input pin "data_rd[2]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 19
+    Warning (15610): No output dependent on input pin "data_rd[3]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 19
+    Warning (15610): No output dependent on input pin "data_rd[4]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 19
+    Warning (15610): No output dependent on input pin "data_rd[5]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 19
+    Warning (15610): No output dependent on input pin "data_rd[6]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 19
+    Warning (15610): No output dependent on input pin "data_rd[7]" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 19
+    Warning (15610): No output dependent on input pin "busy" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 20
+    Warning (15610): No output dependent on input pin "ack_error" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd Line: 21
+Info (21057): Implemented 35 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 28 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21060): Implemented 4 bidirectional pins
+    Info (21061): Implemented 1 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Sun Nov 15 21:56:33 2020
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:28
+
+

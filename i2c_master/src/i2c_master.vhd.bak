@@ -1,0 +1,134 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity i2c_master is
+
+GENERIC(
+			GC_SYSTEM_fre: INTEGER:=50_000_000;
+			GC_I2C_fre: INTEGER:=20_000;
+		
+			);
+port(
+  clk       		:in std_logic;--system clock
+  clk_ena			:in std_logic;
+  GSENSOR_CS_n 	:in std_logic; -- I2c communication enable 1
+  arst_n    		:in std_logic;--asynchronous active low reset
+  
+  scl_clk 		:out STD_LOGIC; -- Generated clock
+  state_ena    :out STD_LOGIC; --	enables state transition (duration 1 system clk cycle)
+  scl_high_enable  	:out  STD_LOGIC; -- enable signal used for START and STOP conditions,data sample, and acknowledge (duration 1 system clk cycle)
+  
+
+ 
+);
+end entity i2c_master;
+
+architecture logic of i2c_master is
+
+
+	signal GSENSOR_CS_n  :='1';--enable I2c communication.  
+   signal scl_clk   : std_logic:='0';--internal continuous running i2c clk signal
+
+	CONSTANT C_SCL_PERIOD		: INTEGER    :=GC_SYSTEM_fre/GC_I2C_fre; -- No. of system clock cycles in one SCL period. Used to indicate the transition point from 1->0 of the SCL signal
+	CONSTANT C_SCL_HALF_PERIOD : INTEGER := C_SCL_PERIOD / 2;	       -- No. of system clock cycles in one half of a SCL period. Used to indicate the transition point from 0->1 of the SCL signal.
+	CONSTANT C_STATE_TRIGGER 	: INTEGER := C_SCL_PERIOD / 4;     	 -- No. of system clock cycles in 1/4 of a SCL period. Used to indicate the transition of the main state machine.
+	CONSTANT C_SCL_TRIGGER 		: INTEGER := C_SCL_PERIOD * 3 / 4; 	 -- No. of system clock cycles in 3/4 of SCL period. Used to indicate the timing of a START and STOP condition as wall as when to SAMPLE the SDA line. 
+     
+	type state_ena is range 0 to clk; --	enables state transition (duration 1 system clk cycle)
+   type  scl_high_enable  	is range 0 to clk; -- enable signal used for START and STOP conditions,data sample, and acknowledge (duration 1 system clk cycle)
+  
+	
+	
+	
+begin
+
+--create system clk
+  clk <= not clk after 1/(2*GC_SYSTEM_CLK);
+
+ -------1.create internal SCL clock
+--The scl_clk is derived from the 50 MHz system clock GC_SYSTEM_CLK. Use the internal variable cnt to control the correct timing of the scl_clk.
+--scl_clk will be low for the first half part of its period and high for the second part of its period.
+   
+
+  p_sclk : process( clk, arst_n)
+  signal cnt   :integer range 0 to C_SCL_PERIOD  ;	-- internal continuous running i2c clk signal
+
+  
+  begin
+
+    if arst_n = '0' then--1if
+	 cnt:=0;	
+    scl_clk<='0';
+    elsif rising_edge(clk) then--5if
+	
+    cnt:=cnt+1;
+	  if(cnt=C_SCL_PERIOD) then--2if
+	 cnt:=0;
+	 end if;--end2if
+	
+	 if (cnt<C_SCL_PERIOD) then--3if
+	
+	 scl_clk<= not scl_clk after C_SCL_HALF_PERIOD;
+	 
+	
+	 end if;--end5if
+	 
+    end if;--end3if
+	 
+	 end if;--end1if
+	 
+  end process;
+  
+---2.Create the internal trigger/timing enable signals
+
+--The scl_high_ena signal will be used to trigger the sampling of the SDA line during a read transaction or acknowledge condition, and to trigger the START and STOP conditions.
+--The scl_high_ena signal should therefore be active for one period of the system clock cycle at some point during the high state of SCL. This is the correct timing of when a START and STOP condition will be generated as well as when the data one the SDA line will be sampled. Activate the scl_high_ena signal in the middle of the SCL high state.
+--The state_ena signal will be used to trigger the transition of the state machine and should be generate at the center point of the low state of SCL. That is, the state machine process itself will run on the 50 MHz system clock, but the state_ena signal will be used to step the state machine to its next state.
+-- sequencer
+p_ctrl : process( clk, arst_n)
+  signal cnt   :integer range 0 to C_SCL_PERIOD  ;	-- internal continuous running i2c clk signal
+  scl_high_ena<=  1/GC_SYSTEM_fre:='0';
+  state_ena<= 1/GC_SYSTEM_fre:='0';
+  
+  begin
+   
+    if arst_n = '0' then--1if
+	 cnt:=0;
+	
+   
+    if rising_edge(clk) then--5if
+    cnt:=cnt+1;
+	 
+	  if(cnt=C_SCL_PERIOD) then--2if
+	 cnt:=0;
+	 end if;--end2if
+	
+	 if (cnt=C_STATE_TRIGGER) then--3if
+	
+	state_ena<='1';
+	 
+	 if(cnt=C_SCL_TRIGGER 	) then--4if
+	 scl_high_ena<=  '1';  
+	 
+	
+		
+	 
+	 end if;--end4if
+	 end if;--end5if
+	 
+    end if;--end3if
+	 
+	 end if;--end1if
+	 
+  end process;
+
+end architecture logic;
+
+
+
+
+
+
+
+
+end i2c_master;

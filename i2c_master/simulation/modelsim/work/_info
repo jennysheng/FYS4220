@@ -1,0 +1,72 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c-master/script
+Ei2c_master
+Z0 w1605474374
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/simulation/modelsim
+8C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd
+FC:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd
+l0
+L4
+Vl=]I8c]V=?UWGl[?^i<CE0
+!s100 5VM8[@5EcUXQVbiei27>I1
+Z4 OV;C;10.5b;63
+32
+!s110 1605474412
+!i10b 1
+!s108 1605474412.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd|
+!s107 C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd|
+!i113 1
+Z5 o-work work -2002 -explicit
+Z6 tExplicit 1 CvgOpt 0
+Alogic
+R1
+R2
+DEx4 work 10 i2c_master 0 22 l=]I8c]V=?UWGl[?^i<CE0
+l49
+L30
+VIDYWz3RV`RaU]HJmO7ULS1
+!s100 3zFcmQWfK[kAhkZjAlkmQ0
+R4
+32
+!s110 1605473864
+!i10b 1
+!s108 1605473864.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\JennySheng\Documents\FYS4220-Jenny-Sheng\i2c_master\src\i2c_master.vhd|
+!s107 C:\Users\JennySheng\Documents\FYS4220-Jenny-Sheng\i2c_master\src\i2c_master.vhd|
+!i113 1
+R5
+R6
+FC:\Users\JennySheng\Documents\FYS4220-Jenny-Sheng\i2c_master\src\i2c_master.vhd
+8C:\Users\JennySheng\Documents\FYS4220-Jenny-Sheng\i2c_master\src\i2c_master.vhd
+Ei2c_master_tb
+w1605473197
+R1
+R2
+R3
+8C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/tb/i2c_master_tb.vhd
+FC:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/tb/i2c_master_tb.vhd
+l0
+L4
+V]A^b[KF2YlmdniSSiAQdi2
+!s100 L4=hlge_W<N^5hFeKg3gh3
+R4
+32
+!s110 1605473881
+!i10b 1
+!s108 1605473881.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/tb/i2c_master_tb.vhd|
+!s107 C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/tb/i2c_master_tb.vhd|
+!i113 1
+R5
+R6
