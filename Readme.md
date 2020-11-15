@@ -32,7 +32,12 @@ e) Which VHDL statement is needed to connect the input ports to the output ports
 
 
  ### Excercise 2: Seven segment display.
- .
- .
- .
+ a) How many values can a 4-bit binary number represent, and can all of these numbers be shown on the seven segment display?
+
+ 2^4=16 No only digits from 0 to 9
+
+Hexadecimal represention.
+
+b) The input port sw is a bundle / vector of 10 input while only 4 are needed to control the seven segment display. How can you address only parts of a std_logic_vector?
+sw(3 downto 0)
  and so on
