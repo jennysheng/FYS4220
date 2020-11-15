@@ -22,6 +22,7 @@
  ### Exercise 1: Your first FPGA project
 
 a) What is the meaning of the warning messages in the compilation report and why can we choose to ignore them at this stage?
+
 b) What is the purpose of the entity and architecture description?
 c) What is the purpose of the Tcl file used in this problem?
 
