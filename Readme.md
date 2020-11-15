@@ -43,7 +43,7 @@ b) The input port sw is a bundle / vector of 10 input while only 4 are needed to
 sw(3 downto 0)
 
 
- ### Excercise 3: Embedded system project.
+ ### Excercise 3: Synchronization and edge detection.
  a) Which package is available in VHDL to arithmetic operations?
    IEEE.numeric_std.all;
 
