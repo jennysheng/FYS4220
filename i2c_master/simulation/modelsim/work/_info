@@ -9,64 +9,83 @@ z2
 cModel Technology
 dC:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c-master/script
 Ei2c_master
-Z0 w1605474374
-Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z3 dC:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/simulation/modelsim
-8C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd
-FC:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd
+Z0 w1605553194
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/simulation/modelsim
+Z5 8../../src/i2c_master.vhd
+Z6 F../../src/i2c_master.vhd
 l0
-L4
-Vl=]I8c]V=?UWGl[?^i<CE0
-!s100 5VM8[@5EcUXQVbiei27>I1
-Z4 OV;C;10.5b;63
-32
-!s110 1605474412
+L5
+VK3gj19T0lKBoUaH>OUf[82
+!s100 i9m8Be`hL9PDl3;>U^i1E2
+Z7 OV;C;10.5b;63
+33
+Z8 !s110 1605553218
 !i10b 1
-!s108 1605474412.000000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd|
-!s107 C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/src/i2c_master.vhd|
+Z9 !s108 1605553218.000000
+Z10 !s90 -reportprogress|300|-2008|-check_synthesis|../../src/i2c_master.vhd|
+Z11 !s107 ../../src/i2c_master.vhd|
 !i113 1
-Z5 o-work work -2002 -explicit
-Z6 tExplicit 1 CvgOpt 0
+Z12 o-2008 -check_synthesis
+Z13 tExplicit 1 CvgOpt 0
 Alogic
 R1
 R2
-DEx4 work 10 i2c_master 0 22 l=]I8c]V=?UWGl[?^i<CE0
-l49
-L30
-VIDYWz3RV`RaU]HJmO7ULS1
-!s100 3zFcmQWfK[kAhkZjAlkmQ0
-R4
-32
-!s110 1605473864
+R3
+Z14 DEx4 work 10 i2c_master 0 22 K3gj19T0lKBoUaH>OUf[82
+l39
+L26
+VfgWF2N]8Gdg=2i>0eDNHk1
+!s100 45GPE>:SLA2VU;QaH>g>63
+R7
+33
+R8
 !i10b 1
-!s108 1605473864.000000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\JennySheng\Documents\FYS4220-Jenny-Sheng\i2c_master\src\i2c_master.vhd|
-!s107 C:\Users\JennySheng\Documents\FYS4220-Jenny-Sheng\i2c_master\src\i2c_master.vhd|
+R9
+R10
+R11
 !i113 1
-R5
-R6
-FC:\Users\JennySheng\Documents\FYS4220-Jenny-Sheng\i2c_master\src\i2c_master.vhd
-8C:\Users\JennySheng\Documents\FYS4220-Jenny-Sheng\i2c_master\src\i2c_master.vhd
+R12
+R13
 Ei2c_master_tb
-w1605473197
+Z15 w1605553340
 R1
 R2
 R3
-8C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/tb/i2c_master_tb.vhd
-FC:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/tb/i2c_master_tb.vhd
-l0
-L4
-V]A^b[KF2YlmdniSSiAQdi2
-!s100 L4=hlge_W<N^5hFeKg3gh3
 R4
+Z16 8C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/tb/i2c_master_tb.vhd
+Z17 FC:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/tb/i2c_master_tb.vhd
+l0
+L5
+VWUJjHSI5g[`z?0NN]h[[X0
+!s100 hm]m9Ia1ReI[04eGgl_JY0
+R7
 32
-!s110 1605473881
+Z18 !s110 1605553366
 !i10b 1
-!s108 1605473881.000000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/tb/i2c_master_tb.vhd|
-!s107 C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/tb/i2c_master_tb.vhd|
+Z19 !s108 1605553366.000000
+Z20 !s90 -reportprogress|300|C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/tb/i2c_master_tb.vhd|
+Z21 !s107 C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/tb/i2c_master_tb.vhd|
 !i113 1
-R5
-R6
+R13
+Atb
+R14
+R1
+R2
+R3
+Z22 DEx4 work 13 i2c_master_tb 0 22 WUJjHSI5g[`z?0NN]h[[X0
+l28
+L8
+V3z_ZX;QoTA?CI>0e6zL@:2
+!s100 ZJ?ckLcCg?cZX:BYN@?b<3
+R7
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R13

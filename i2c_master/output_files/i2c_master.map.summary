@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Nov 15 21:56:33 2020
+Analysis & Synthesis Status : Successful - Mon Nov 16 19:01:10 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : i2c_master
 Top-level Entity Name : i2c_master
 Family : MAX 10
-Total logic elements : 1
-    Total combinational functions : 0
-    Dedicated logic registers : 1
-Total registers : 1
-Total pins : 34
+Total logic elements : 19
+    Total combinational functions : 19
+    Dedicated logic registers : 9
+Total registers : 9
+Total pins : 31
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

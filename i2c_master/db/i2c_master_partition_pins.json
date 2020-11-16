@@ -8,7 +8,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk_ena",
+					"name" : "scl",
 					"strict" : false
 				},
 				{

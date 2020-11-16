@@ -9,6 +9,8 @@ entity lab1 is
   port(
     sw:in std_logic_vector(9 downto 0);
     led:out std_logic_vector(9 downto 0)
+
+
 );
 
   

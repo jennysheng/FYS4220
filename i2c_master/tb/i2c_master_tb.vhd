@@ -1,72 +1,67 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+use ieee.numeric_std.all;
 
-entity i2c_master_tb is
-end entity;
+ENTITY i2c_master_tb IS
+END ENTITY;
 
-architecture tb of i2c_master_tb is
+ARCHITECTURE tb OF i2c_master_tb IS
 
-	signal clk       : std_logic;
-	signal arst_n    : std_logic;
-	signal valid     : std_logic;
-	signal addr      : std_logic_vector(6 downto 0);
-	signal rnw       : std_logic;
-	signal data_wr   : std_logic_vector(7 downto 0);
-	signal data_rd   : std_logic_vector(7 downto 0);
-	signal busy      : std_logic;
-	signal ack_error : std_logic;
-   signal sda       : std_logic;
-	signal scl       : std_logic;
-	 signal state_ena       : std_logic;
-	signal scl_high_ena      : std_logic;
+    SIGNAL clk : STD_LOGIC;
+    SIGNAL arst_n : STD_LOGIC;
+    SIGNAL valid : STD_LOGIC;
+    SIGNAL addr : STD_LOGIC_VECTOR(6 DOWNTO 0);
+    SIGNAL rnw : STD_LOGIC;
+    SIGNAL data_wr : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL data_rd : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL busy : STD_LOGIC;
+    SIGNAL ack_error : STD_LOGIC;
+    SIGNAL sda : STD_LOGIC;
+    SIGNAL scl : STD_LOGIC;
+    SIGNAL clk_ena : BOOLEAN := false;
+    SIGNAL clk_period : TIME := 20 ns;
 
-   signal clk_ena       : boolean:=false ;
-	signal clk_period    : time := 20 ns;
+    CONSTANT GC_SYSTEM_CLK : INTEGER := 50_000_000;
+    CONSTANT GC_I2C_CLK : INTEGER := 200_000;
+    CONSTANT C_SCL_PERIOD : TIME := clk_period * (GC_SYSTEM_CLK/GC_I2C_CLK);
 
-  constant GC_SYSTEM_CLK : integer := 50_000_000;
-  constant GC_I2C_CLK    : integer := 200_000;
-  constant C_SCL_PERIOD  : time := clk_period*(GC_SYSTEM_CLK/GC_I2C_CLK);
+BEGIN
+    UUT : ENTITY work.i2c_master
+        GENERIC MAP(
+            GC_SYSTEM_CLK => GC_SYSTEM_CLK,
+            GC_I2C_CLK => GC_I2C_CLK)
+        PORT MAP(
+            clk => clk,
+            arst_n => arst_n,
+            valid => valid,
+            addr => addr,
+            rnw => rnw,
+            data_wr => data_wr,
+            data_rd => data_rd,
+            busy => busy,
+            ack_error => ack_error,
+            sda => sda,
+            scl => scl
+          
+        );
 
-begin
-  UUT : entity work.i2c_master
---    generic map (
---		GC_SYSTEM_CLK => GC_SYSTEM_CLK,
---      GC_I2C_CLK    => GC_I2C_CLK)
-    port map (
-      clk       => clk,
-		clk_ena   => clk_ena,
-      arst_n    => arst_n,
-      valid     => valid,
-      addr      => addr,
-      rnw       => rnw,
-      data_wr   => data_wr,
-      data_rd   => data_rd,
-      busy      => busy,
-      ack_error => ack_error,
-      sda       => sda,
-      scl       => scl,
-		state_ena  => state_ena  ,
-		scl_high_ena=>scl_high_ena
-		
-		
-		);
+    --create clk
+    clk <= NOT clk AFTER clk_period / 2 WHEN clk_ena ELSE   '0';
 
---create clk
-  clk <= not clk after clk_period/2 when clk_ena else '0';
-
--- sequencer
-  p_seq : process
-  begin
-    -- Start clk
-    clk_ena <= true;
-    arst_n <= '1';
-    -- Reset circuit
-    wait until clk = '1';
-    arst_n <= '0';
-    wait for clk_period*5;
-    arst_n <= '1';
-    wait for C_SCL_PERIOD*2;
-    clk_ena <= false;
-    wait;
-  end process;
-end architecture tb;
+    -- sequencer
+    p_seq : PROCESS
+    BEGIN
+        -- Start clk
+        report("start simulation");
+        clk_ena <= true;
+        arst_n <= '1';
+        -- Reset circuit
+        WAIT UNTIL clk = '1';
+        arst_n <= '0';--ACTIVE LOW RESET??
+        WAIT FOR clk_period * 5;
+        arst_n <= '1';
+        WAIT FOR C_SCL_PERIOD * 2;
+        clk_ena <= false;
+        WAIT;
+    END PROCESS;
+END ARCHITECTURE tb;

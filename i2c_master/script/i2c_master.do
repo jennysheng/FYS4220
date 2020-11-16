@@ -4,8 +4,8 @@ vlib work
 vmap work work
 
 # Compile the design and tb files
-vcom -2008 -check_synthesis C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c-master/src/i2c_master.vhd
-vcom C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c-master/tb/i2c_master_tb.vhd
+vcom -2008 -check_synthesis ../../src/i2c_master.vhd
+vcom ../../tb/i2c_master_tb.vhd
 
 # start the simulation
 vsim i2c_master_tb

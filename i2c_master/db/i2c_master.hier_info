@@ -1,7 +1,4 @@
 |i2c_master
-clk_ena <> clk_ena~reg0
-arst_n => scl.OUTPUTSELECT
-arst_n => clk_ena~reg0.ACLR
 arst_n => \p_sclk:cnt[0].ACLR
 arst_n => \p_sclk:cnt[1].ACLR
 arst_n => \p_sclk:cnt[2].ACLR
@@ -10,10 +7,7 @@ arst_n => \p_sclk:cnt[4].ACLR
 arst_n => \p_sclk:cnt[5].ACLR
 arst_n => \p_sclk:cnt[6].ACLR
 arst_n => \p_sclk:cnt[7].ACLR
-arst_n => \p_sclk:cnt[8].ACLR
-arst_n => \p_sclk:cnt[9].ACLR
-arst_n => \p_sclk:cnt[10].ACLR
-arst_n => \p_sclk:cnt[11].ACLR
+arst_n => scl_clk.ENA
 valid => ~NO_FANOUT~
 addr[0] => ~NO_FANOUT~
 addr[1] => ~NO_FANOUT~
@@ -42,8 +36,6 @@ data_rd[7] => ~NO_FANOUT~
 busy => ~NO_FANOUT~
 ack_error => ~NO_FANOUT~
 sda <> <UNC>
-scl <> scl~reg0
-state_ena <= <GND>
-scl_high_ena <= <GND>
+scl <> scl
 
 
