@@ -1,5 +1,5 @@
 Fitter report for i2c_master
-Mon Nov 16 19:01:12 2020
+Tue Nov 17 19:01:36 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,16 +13,17 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Ignored Assignments
   6. Fitter Resource Usage Summary
   7. Input Pins
-  8. Bidir Pins
-  9. I/O Bank Usage
- 10. All Package Pins
- 11. Fitter Resource Utilization by Entity
- 12. Delay Chain Summary
- 13. Pad To Core Delay Chain Fanout
- 14. Control Signals
- 15. Fitter Device Options
- 16. Operating Settings and Conditions
- 17. Fitter Messages
+  8. Output Pins
+  9. Bidir Pins
+ 10. I/O Bank Usage
+ 11. All Package Pins
+ 12. Fitter Resource Utilization by Entity
+ 13. Delay Chain Summary
+ 14. Pad To Core Delay Chain Fanout
+ 15. Control Signals
+ 16. Fitter Device Options
+ 17. Operating Settings and Conditions
+ 18. Fitter Messages
 
 
 
@@ -48,17 +49,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Failed - Mon Nov 16 19:01:12 2020           ;
+; Fitter Status                      ; Failed - Tue Nov 17 19:01:36 2020           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; i2c_master                                  ;
 ; Top-level Entity Name              ; i2c_master                                  ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 19 / 49,760 ( < 1 % )                       ;
-;     Total combinational functions  ; 19 / 49,760 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 9 / 49,760 ( < 1 % )                        ;
-; Total registers                    ; 9                                           ;
+; Total logic elements               ; 117 / 49,760 ( < 1 % )                      ;
+;     Total combinational functions  ; 93 / 49,760 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 59 / 49,760 ( < 1 % )                       ;
+; Total registers                    ; 59                                          ;
 ; Total pins                         ; 31 / 360 ( 9 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
@@ -215,55 +216,55 @@ refer to the applicable agreement for further details.
 +----------+----------------+--------------+--------------+---------------+----------------+
 
 
-+---------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                       ;
-+---------------------------------------------+-----------------------+
-; Resource                                    ; Usage                 ;
-+---------------------------------------------+-----------------------+
-; Total logic elements                        ; 19 / 49,760 ( < 1 % ) ;
-;     -- Combinational with no register       ; 10                    ;
-;     -- Register only                        ; 0                     ;
-;     -- Combinational with a register        ; 9                     ;
-;                                             ;                       ;
-; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 8                     ;
-;     -- 3 input functions                    ; 2                     ;
-;     -- <=2 input functions                  ; 9                     ;
-;     -- Register only                        ; 0                     ;
-;                                             ;                       ;
-; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 12                    ;
-;     -- arithmetic mode                      ; 7                     ;
-;                                             ;                       ;
-; Total registers*                            ; 9 / 51,509 ( < 1 % )  ;
-;     -- Dedicated logic registers            ; 9 / 49,760 ( < 1 % )  ;
-;     -- I/O registers                        ; 0 / 1,749 ( 0 % )     ;
-;                                             ;                       ;
-; Total LABs                                  ; Not available         ;
-; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 31 / 360 ( 9 % )      ;
-;     -- Clock pins                           ; 0 / 8 ( 0 % )         ;
-;     -- Dedicated input pins                 ; 0 / 1 ( 0 % )         ;
-;                                             ;                       ;
-; M9Ks                                        ; 0 / 182 ( 0 % )       ;
-; UFM blocks                                  ; 0 / 1 ( 0 % )         ;
-; ADC blocks                                  ; 0 / 2 ( 0 % )         ;
-; Total block memory bits                     ; 0 / 1,677,312 ( 0 % ) ;
-; Total block memory implementation bits      ; 0 / 1,677,312 ( 0 % ) ;
-; Embedded Multiplier 9-bit elements          ; 0 / 288 ( 0 % )       ;
-; PLLs                                        ; 0 / 4 ( 0 % )         ;
-; Global signals                              ; 0                     ;
-;     -- Global clocks                        ; 0 / 20 ( 0 % )        ;
-; JTAGs                                       ; 0 / 1 ( 0 % )         ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
-; Remote update blocks                        ; 0 / 1 ( 0 % )         ;
-; Oscillator blocks                           ; 0 / 1 ( 0 % )         ;
-; Impedance control blocks                    ; 0 / 1 ( 0 % )         ;
-; Maximum fan-out                             ; 10                    ;
-; Highest non-global fan-out                  ; 10                    ;
-; Total fan-out                               ; 116                   ;
-; Average fan-out                             ; 1.25                  ;
-+---------------------------------------------+-----------------------+
++----------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                        ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Total logic elements                        ; 117 / 49,760 ( < 1 % ) ;
+;     -- Combinational with no register       ; 58                     ;
+;     -- Register only                        ; 24                     ;
+;     -- Combinational with a register        ; 35                     ;
+;                                             ;                        ;
+; Logic element usage by number of LUT inputs ;                        ;
+;     -- 4 input functions                    ; 60                     ;
+;     -- 3 input functions                    ; 20                     ;
+;     -- <=2 input functions                  ; 13                     ;
+;     -- Register only                        ; 24                     ;
+;                                             ;                        ;
+; Logic elements by mode                      ;                        ;
+;     -- normal mode                          ; 86                     ;
+;     -- arithmetic mode                      ; 7                      ;
+;                                             ;                        ;
+; Total registers*                            ; 59 / 51,509 ( < 1 % )  ;
+;     -- Dedicated logic registers            ; 59 / 49,760 ( < 1 % )  ;
+;     -- I/O registers                        ; 0 / 1,749 ( 0 % )      ;
+;                                             ;                        ;
+; Total LABs                                  ; Not available          ;
+; Virtual pins                                ; 0                      ;
+; I/O pins                                    ; 31 / 360 ( 9 % )       ;
+;     -- Clock pins                           ; 0 / 8 ( 0 % )          ;
+;     -- Dedicated input pins                 ; 0 / 1 ( 0 % )          ;
+;                                             ;                        ;
+; M9Ks                                        ; 0 / 182 ( 0 % )        ;
+; UFM blocks                                  ; 0 / 1 ( 0 % )          ;
+; ADC blocks                                  ; 0 / 2 ( 0 % )          ;
+; Total block memory bits                     ; 0 / 1,677,312 ( 0 % )  ;
+; Total block memory implementation bits      ; 0 / 1,677,312 ( 0 % )  ;
+; Embedded Multiplier 9-bit elements          ; 0 / 288 ( 0 % )        ;
+; PLLs                                        ; 0 / 4 ( 0 % )          ;
+; Global signals                              ; 0                      ;
+;     -- Global clocks                        ; 0 / 20 ( 0 % )         ;
+; JTAGs                                       ; 0 / 1 ( 0 % )          ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
+; Remote update blocks                        ; 0 / 1 ( 0 % )          ;
+; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
+; Impedance control blocks                    ; 0 / 1 ( 0 % )          ;
+; Maximum fan-out                             ; 59                     ;
+; Highest non-global fan-out                  ; 59                     ;
+; Total fan-out                               ; 539                    ;
+; Average fan-out                             ; 2.50                   ;
++---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
@@ -273,35 +274,44 @@ refer to the applicable agreement for further details.
 +------------+------------+----------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name       ; Pin #      ; I/O Bank ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------------+------------+----------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; ack_error  ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; addr[0]    ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; addr[1]    ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; addr[2]    ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; addr[3]    ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; addr[4]    ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; addr[5]    ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; addr[6]    ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; arst_n     ; Unassigned ; --       ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
-; busy       ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_rd[0] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_rd[1] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_rd[2] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_rd[3] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_rd[4] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_rd[5] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_rd[6] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_rd[7] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_wr[0] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_wr[1] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_wr[2] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_wr[3] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_wr[4] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_wr[5] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_wr[6] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; data_wr[7] ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; rnw        ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
-; valid      ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; addr[0]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; addr[1]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; addr[2]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; addr[3]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; addr[4]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; addr[5]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; addr[6]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; arst_n     ; Unassigned ; --       ; 30                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; clk        ; Unassigned ; --       ; 59                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; User                 ; 0         ;
+; data_wr[0] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; data_wr[1] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; data_wr[2] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; data_wr[3] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; data_wr[4] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; data_wr[5] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; data_wr[6] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; data_wr[7] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; rnw        ; Unassigned ; --       ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
+; valid      ; Unassigned ; --       ; 11                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; None         ; --                        ; Fitter               ; 0         ;
 +------------+------------+----------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                                                                                   ;
++------------+------------+----------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+; Name       ; Pin #      ; I/O Bank ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
++------------+------------+----------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+; ack_error  ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; busy       ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; data_rd[0] ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; data_rd[1] ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; data_rd[2] ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; data_rd[3] ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; data_rd[4] ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; data_rd[5] ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; data_rd[6] ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; data_rd[7] ; Unassigned ; --       ; no              ; no                     ; no            ; no        ; no              ; no         ; no            ; no       ; Off          ; None         ; Default          ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
++------------+------------+----------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -309,9 +319,8 @@ refer to the applicable agreement for further details.
 +------+------------+----------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------+
 ; Name ; Pin #      ; I/O Bank ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Output Termination ; Termination Control Block ; Output Buffer Pre-emphasis ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +------+------------+----------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------+
-; clk  ; Unassigned ; --       ; 9                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; scl  ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; no         ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; Fitter               ; 0 pF                 ; -                   ;
-; sda  ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; scl  ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; Fitter               ; 0 pF                 ; scl~2 (inverted)    ;
+; sda  ; Unassigned ; --       ; 9                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 0         ; no              ; yes        ; no       ; Off          ; None         ; Default          ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; sda_i (inverted)    ;
 +------+------------+----------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -831,7 +840,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+-------------+---------------------------+---------------+-------------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------+-------------+--------------+
-; |i2c_master                ; 0 (0)       ; 9 (9)                     ; 0 (0)         ; 0           ; 0          ; 0            ; 0       ; 0         ; 31   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |i2c_master         ; i2c_master  ; work         ;
+; |i2c_master                ; 0 (0)       ; 59 (59)                   ; 0 (0)         ; 0           ; 0          ; 0            ; 0       ; 0         ; 31   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |i2c_master         ; i2c_master  ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -841,37 +850,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+----------+---------------+---------------+-----------------------+-----+------+
 ; Name       ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
 +------------+----------+---------------+---------------+-----------------------+-----+------+
-; valid      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; addr[0]    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; addr[1]    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; addr[2]    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; addr[3]    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; addr[4]    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; addr[5]    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; addr[6]    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; rnw        ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_wr[0] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_wr[1] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_wr[2] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_wr[3] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_wr[4] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_wr[5] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_wr[6] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_wr[7] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_rd[0] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_rd[1] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_rd[2] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_rd[3] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_rd[4] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_rd[5] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_rd[6] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; data_rd[7] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; busy       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; ack_error  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sda        ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; clk        ; Bidir    ; 0             ; --            ; --                    ; --  ; --   ;
+; data_rd[0] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; data_rd[1] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; data_rd[2] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; data_rd[3] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; data_rd[4] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; data_rd[5] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; data_rd[6] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; data_rd[7] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; busy       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; ack_error  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; sda        ; Bidir    ; 0             ; --            ; --                    ; --  ; --   ;
 ; scl        ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; clk        ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; arst_n     ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; valid      ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; rnw        ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; data_wr[6] ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; data_wr[5] ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; data_wr[4] ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; data_wr[7] ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; data_wr[2] ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; data_wr[1] ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; data_wr[0] ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; data_wr[3] ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; addr[5]    ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; addr[4]    ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; addr[3]    ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; addr[6]    ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; addr[0]    ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; addr[1]    ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; addr[2]    ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 +------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -880,48 +889,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
+; sda                 ;                   ;         ;
+; scl                 ;                   ;         ;
+; clk                 ;                   ;         ;
+; arst_n              ;                   ;         ;
 ; valid               ;                   ;         ;
+; rnw                 ;                   ;         ;
+; data_wr[6]          ;                   ;         ;
+; data_wr[5]          ;                   ;         ;
+; data_wr[4]          ;                   ;         ;
+; data_wr[7]          ;                   ;         ;
+; data_wr[2]          ;                   ;         ;
+; data_wr[1]          ;                   ;         ;
+; data_wr[0]          ;                   ;         ;
+; data_wr[3]          ;                   ;         ;
+; addr[5]             ;                   ;         ;
+; addr[4]             ;                   ;         ;
+; addr[3]             ;                   ;         ;
+; addr[6]             ;                   ;         ;
 ; addr[0]             ;                   ;         ;
 ; addr[1]             ;                   ;         ;
 ; addr[2]             ;                   ;         ;
-; addr[3]             ;                   ;         ;
-; addr[4]             ;                   ;         ;
-; addr[5]             ;                   ;         ;
-; addr[6]             ;                   ;         ;
-; rnw                 ;                   ;         ;
-; data_wr[0]          ;                   ;         ;
-; data_wr[1]          ;                   ;         ;
-; data_wr[2]          ;                   ;         ;
-; data_wr[3]          ;                   ;         ;
-; data_wr[4]          ;                   ;         ;
-; data_wr[5]          ;                   ;         ;
-; data_wr[6]          ;                   ;         ;
-; data_wr[7]          ;                   ;         ;
-; data_rd[0]          ;                   ;         ;
-; data_rd[1]          ;                   ;         ;
-; data_rd[2]          ;                   ;         ;
-; data_rd[3]          ;                   ;         ;
-; data_rd[4]          ;                   ;         ;
-; data_rd[5]          ;                   ;         ;
-; data_rd[6]          ;                   ;         ;
-; data_rd[7]          ;                   ;         ;
-; busy                ;                   ;         ;
-; ack_error           ;                   ;         ;
-; sda                 ;                   ;         ;
-; clk                 ;                   ;         ;
-; scl                 ;                   ;         ;
-; arst_n              ;                   ;         ;
 +---------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                             ;
-+--------+------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name   ; Location   ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------+------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; arst_n ; Unassigned ; 10      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; clk    ; Unassigned ; 9       ; Clock        ; no     ; --                   ; --               ; --                        ;
-+--------+------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                    ;
++-----------------+------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; Name            ; Location   ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------+------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; addr_rnw_i[7]~2 ; Unassigned ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; arst_n          ; Unassigned ; 30      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
+; bit_cnt[2]~1    ; Unassigned ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; clk             ; Unassigned ; 59      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; data_rd[0]~1    ; Unassigned ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; data_tx[7]~2    ; Unassigned ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
++-----------------+------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +---------------------------------------------------------------------------------------------+
@@ -977,7 +980,7 @@ Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments 
 Error (171000): Can't fit design in device
 Error: Quartus Prime Fitter was unsuccessful. 2 errors, 3 warnings
     Error: Peak virtual memory: 4955 megabytes
-    Error: Processing ended: Mon Nov 16 19:01:12 2020
+    Error: Processing ended: Tue Nov 17 19:01:36 2020
     Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 

@@ -1,5 +1,5 @@
 Flow report for i2c_master
-Mon Nov 16 19:01:12 2020
+Tue Nov 17 19:01:36 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Mon Nov 16 19:01:12 2020      ;
+; Flow Status                        ; Flow Failed - Tue Nov 17 19:01:36 2020      ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; i2c_master                                  ;
 ; Top-level Entity Name              ; i2c_master                                  ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 19 / 49,760 ( < 1 % )                       ;
-;     Total combinational functions  ; 19 / 49,760 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 9 / 49,760 ( < 1 % )                        ;
-; Total registers                    ; 9                                           ;
+; Total logic elements               ; 117 / 49,760 ( < 1 % )                      ;
+;     Total combinational functions  ; 93 / 49,760 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 59 / 49,760 ( < 1 % )                       ;
+; Total registers                    ; 59                                          ;
 ; Total pins                         ; 31 / 360 ( 9 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/16/2020 19:00:58 ;
+; Start date & time ; 11/17/2020 19:01:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; i2c_master          ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 154027275522015.160554965810696        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 154027275522015.160563608213064        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -94,9 +94,9 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4794 MB             ; 00:00:25                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4795 MB             ; 00:00:25                           ;
 ; Fitter               ; 00:00:01     ; 1.0                     ; 4955 MB             ; 00:00:01                           ;
-; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:26                           ;
+; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:26                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
