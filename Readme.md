@@ -10,7 +10,7 @@
 
 ## Embedded system project
  - Problem 1: <completed>
- - Problem 2: < not started | started | completed >
+ - Problem 2: < started >
  - Problem 3: < not started | started | completed >
  - Problem 4: < not started | started | completed >
 
