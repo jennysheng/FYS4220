@@ -88,7 +88,8 @@ because the counter value is undefined. we need to signal counter: std_logic_vec
 l) What happens when you press the push button KEY1 to start the counter, and can you explain why this happens?
 
 without edge detection the key1 kan push a lot of clock cycles which cause the number increase very fast, after the edge detection , the number will increment one by one.
- ### Excercise 4: Synchronization and Edge detection.
+
+### Excercise 4: Synchronization and Edge detection.
 a) What is the purpose of synchronization registers and when do you need to use them?
 When sampling a signal from an asynchronous domain (e.g. a button push) or a signal crossing a clock domain, it is required to synchronize the signal to avoid a metastable condition.
 
