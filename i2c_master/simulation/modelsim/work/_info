@@ -8,84 +8,292 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c-master/script
-Ei2c_master
-Z0 w1605636078
-Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z4 dC:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/simulation/modelsim
-Z5 8../../src/i2c_master.vhd
-Z6 F../../src/i2c_master.vhd
+Eadxl345_simmodel
+Z0 w1605741309
+Z1 D^#x9 uvvm_util 17 uvvm_util_context 0 22 @8hK@mSWGbDi65:`mCT;K3
+Z2 DPx9 uvvm_util 14 bfm_common_pkg 0 22 Md0U>I3zOjmY9z67;ST5]0
+Z3 DPx9 uvvm_util 19 alert_hierarchy_pkg 0 22 Xo`38R4jORHcG17QeTV4[3
+Z4 DPx9 uvvm_util 11 license_pkg 0 22 eUO^ckJ]bB[[@lSgP<E0W2
+Z5 DPx9 uvvm_util 11 methods_pkg 0 22 6@f<6o=0LmAi2JTOXGWoN0
+Z6 DPx9 uvvm_util 25 hierarchy_linked_list_pkg 0 22 c[NJe`zPGMPXLe8JO^`iB3
+Z7 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z8 DPx9 uvvm_util 18 string_methods_pkg 0 22 KDmH9KDf<98Kc[K?cVLHk2
+Z9 DPx9 uvvm_util 19 protected_types_pkg 0 22 4`GJBnQDHCOU;E3G>F]hi1
+Z10 DPx9 uvvm_util 15 adaptations_pkg 0 22 8Ae[eSPWM34FFD6@Em>[L1
+Z11 DPx9 uvvm_util 39 global_signals_and_shared_variables_pkg 0 22 2ELGC`VR721`5SPO3GzDg3
+Z12 DPx9 uvvm_util 9 types_pkg 0 22 <8O86i1dBLKaAZOY8ZP2<2
+Z13 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z15 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z16 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z17 dC:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/simulation/modelsim
+Z18 8../../tb/adxl345_simmodel.vhd
+Z19 F../../tb/adxl345_simmodel.vhd
 l0
-L5
-V_I^UDHC;2fLAh4Jm<X0GO1
-!s100 T3R9egnDP2EZLf]?diZGP3
-Z7 OV;C;10.5b;63
+L19
+Vg[5SOM@CE2ii5g<ez>XF=1
+!s100 g7>Enn0@N>g`=g8<UBkhT2
+Z20 OV;C;10.5b;63
 33
-Z8 !s110 1605636547
+Z21 !s110 1605813361
 !i10b 1
-Z9 !s108 1605636547.000000
-Z10 !s90 -reportprogress|300|-2008|-check_synthesis|../../src/i2c_master.vhd|
-Z11 !s107 ../../src/i2c_master.vhd|
+Z22 !s108 1605813361.000000
+Z23 !s90 -reportprogress|300|-2008|../../tb/adxl345_simmodel.vhd|
+Z24 !s107 ../../tb/adxl345_simmodel.vhd|
 !i113 1
-Z12 o-2008 -check_synthesis
-Z13 tExplicit 1 CvgOpt 0
+Z25 o-2008
+Z26 tExplicit 1 CvgOpt 0
 Alogic
 R1
 R2
 R3
-Z14 DEx4 work 10 i2c_master 0 22 _I^UDHC;2fLAh4Jm<X0GO1
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+R15
+R16
+Z27 DEx4 work 16 adxl345_simmodel 0 22 g[5SOM@CE2ii5g<ez>XF=1
+l55
+L27
+V0>O1Zi6?i]8LMZ:0M=?[_2
+!s100 zGD:d:W7Y6<^eh75BNi353
+R20
+33
+R21
+!i10b 1
+R22
+R23
+R24
+!i113 1
+R25
+R26
+Ei2c_master
+Z28 w1605636078
+R14
+R15
+R16
+R17
+Z29 8../../src/i2c_master.vhd
+Z30 F../../src/i2c_master.vhd
+l0
+L5
+V_I^UDHC;2fLAh4Jm<X0GO1
+!s100 T3R9egnDP2EZLf]?diZGP3
+R20
+33
+R21
+!i10b 1
+R22
+Z31 !s90 -reportprogress|300|-2008|-check_synthesis|../../src/i2c_master.vhd|
+Z32 !s107 ../../src/i2c_master.vhd|
+!i113 1
+Z33 o-2008 -check_synthesis
+R26
+Alogic
+R14
+R15
+R16
+Z34 DEx4 work 10 i2c_master 0 22 _I^UDHC;2fLAh4Jm<X0GO1
 l52
 L26
 VHWUbf32h6FRzVUCd4Hc_70
 !s100 3UDUj472eIADPWgMeoAi10
-R7
+R20
 33
-R8
+R21
 !i10b 1
-R9
-R10
-R11
+R22
+R31
+R32
 !i113 1
-R12
-R13
-Ei2c_master_tb
-Z15 w1605635571
+R33
+R26
+Ei2c_master_adv_tb
+R0
+Z35 DPx9 uvvm_util 11 i2c_bfm_pkg 0 22 2k`>ehFIoiQMFn>mzXSRY2
 R1
 R2
 R3
 R4
-Z16 8../../tb/i2c_master_tb.vhd
-Z17 F../../tb/i2c_master_tb.vhd
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+R12
+R13
+Z36 DPx4 work 14 i2c_master_pkg 0 22 H[=F=joZFKB3D7ncTz?Yg3
+R14
+R15
+R16
+R17
+Z37 8../../tb/i2c_master_adv_tb.vhd
+Z38 F../../tb/i2c_master_adv_tb.vhd
+l0
+L26
+V8>5Gz53f]c6D^J>SW=mVO3
+!s100 <>OD>P?mHJe@eaW[jN_I`1
+R20
+33
+R21
+!i10b 1
+R22
+Z39 !s90 -reportprogress|300|-2008|../../tb/i2c_master_adv_tb.vhd|
+Z40 !s107 ../../tb/i2c_master_adv_tb.vhd|
+!i113 1
+R25
+R26
+Atb
+R27
+R34
+R35
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+R12
+R13
+R36
+R14
+R15
+R16
+DEx4 work 17 i2c_master_adv_tb 0 22 8>5Gz53f]c6D^J>SW=mVO3
+l38
+L29
+VjKMEe[gAbZo3@hMfY^zm83
+!s100 6cMk:HOm`_CNcjm^S[X1W1
+R20
+33
+R21
+!i10b 1
+R22
+R39
+R40
+!i113 1
+R25
+R26
+Pi2c_master_pkg
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+R15
+R16
+R0
+R17
+Z41 8../../tb/i2c_master_pkg.vhd
+Z42 F../../tb/i2c_master_pkg.vhd
+l0
+L19
+VH[=F=joZFKB3D7ncTz?Yg3
+!s100 U_V<H4kaCT3hRl14d_4oT3
+R20
+33
+b1
+R21
+!i10b 1
+R22
+Z43 !s90 -reportprogress|300|-2008|../../tb/i2c_master_pkg.vhd|
+Z44 !s107 ../../tb/i2c_master_pkg.vhd|
+!i113 1
+R25
+R26
+Bbody
+R36
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+R15
+R16
+l0
+L121
+V]G2[GY8Hlz@2^1DzZfXhb1
+!s100 inFY3UmFH;736md0KUgEM2
+R20
+33
+R21
+!i10b 1
+R22
+R43
+R44
+!i113 1
+R25
+R26
+Ei2c_master_tb
+Z45 w1605635571
+R14
+R15
+R16
+R17
+Z46 8../../tb/i2c_master_tb.vhd
+Z47 F../../tb/i2c_master_tb.vhd
 l0
 L5
 VWUJjHSI5g[`z?0NN]h[[X0
 !s100 hm]m9Ia1ReI[04eGgl_JY0
-R7
+R20
 32
-R8
+Z48 !s110 1605636547
 !i10b 1
-R9
-Z18 !s90 -reportprogress|300|../../tb/i2c_master_tb.vhd|
-Z19 !s107 ../../tb/i2c_master_tb.vhd|
+Z49 !s108 1605636547.000000
+Z50 !s90 -reportprogress|300|../../tb/i2c_master_tb.vhd|
+Z51 !s107 ../../tb/i2c_master_tb.vhd|
 !i113 1
-R13
+R26
 Atb
+R34
 R14
-R1
-R2
-R3
-Z20 DEx4 work 13 i2c_master_tb 0 22 WUJjHSI5g[`z?0NN]h[[X0
+R15
+R16
+DEx4 work 13 i2c_master_tb 0 22 WUJjHSI5g[`z?0NN]h[[X0
 l28
 L8
-Z21 V?iJEjddjZ^=Q3ZOZC0<2A2
-Z22 !s100 k4@cdYid?592P`QdhgmO<2
-R7
+V?iJEjddjZ^=Q3ZOZC0<2A2
+!s100 k4@cdYid?592P`QdhgmO<2
+R20
 32
-R8
+R48
 !i10b 1
-R9
-R18
-R19
+R49
+R50
+R51
 !i113 1
-R13
+R26
