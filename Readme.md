@@ -11,7 +11,7 @@
 ## Embedded system project
  - Problem 5:  <  completed >
  - Problem 6: < started >
- - Problem 7: < not started | started | completed >
+ - Problem 7: < started>
  - Problem 8: < not started | started | completed >
 
 
