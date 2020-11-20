@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY i2c_master IS
+Entity i2c_master IS
     GENERIC (
         GC_SYSTEM_CLK : INTEGER := 50_000_000;
         GC_I2C_CLK : INTEGER := 200_000
