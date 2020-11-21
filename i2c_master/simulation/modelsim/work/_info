@@ -35,9 +35,9 @@ Vg[5SOM@CE2ii5g<ez>XF=1
 !s100 g7>Enn0@N>g`=g8<UBkhT2
 Z20 OV;C;10.5b;63
 33
-Z21 !s110 1605905745
+Z21 !s110 1605989365
 !i10b 1
-Z22 !s108 1605905745.000000
+Z22 !s108 1605989365.000000
 Z23 !s90 -reportprogress|300|-2008|../../tb/adxl345_simmodel.vhd|
 Z24 !s107 ../../tb/adxl345_simmodel.vhd|
 !i113 1
@@ -75,37 +75,38 @@ R24
 !i113 1
 R25
 R26
-Ei2c_master
-Z28 w1605884874
+Ei2c_avalon_mm_if
+Z28 w1605989358
 R14
 R15
 R16
 R17
-Z29 8../../src/i2c_master.vhd
-Z30 F../../src/i2c_master.vhd
+Z29 8../../src/i2c_avalon_mm_if.vhd
+Z30 F../../src/i2c_avalon_mm_if.vhd
 l0
 L5
-V_I^UDHC;2fLAh4Jm<X0GO1
-!s100 T3R9egnDP2EZLf]?diZGP3
+VCZ@<RoH^kTlK>S[FKBdQX1
+!s100 _OPzhT3`i@7Na;K0::56M3
 R20
 33
 R21
 !i10b 1
 R22
-Z31 !s90 -reportprogress|300|-2008|-check_synthesis|../../src/i2c_master.vhd|
-Z32 !s107 ../../src/i2c_master.vhd|
+Z31 !s90 -reportprogress|300|-2008|-check_synthesis|../../src/i2c_avalon_mm_if.vhd|
+Z32 !s107 ../../src/i2c_avalon_mm_if.vhd|
 !i113 1
 Z33 o-2008 -check_synthesis
 R26
-Alogic
+Amemoryrw
+Z34 DEx4 work 10 i2c_master 0 22 blBH0VWGfPc6dbTJ`8I?O0
 R14
 R15
 R16
-Z34 DEx4 work 10 i2c_master 0 22 _I^UDHC;2fLAh4Jm<X0GO1
-l52
-L26
-VHWUbf32h6FRzVUCd4Hc_70
-!s100 3UDUj472eIADPWgMeoAi10
+Z35 DEx4 work 16 i2c_avalon_mm_if 0 22 CZ@<RoH^kTlK>S[FKBdQX1
+l67
+L24
+VmUIF^?>UR>ZQ^I15nJE7l0
+!s100 TGCVa;[Y5Z[TJiYjaOT5J3
 R20
 33
 R21
@@ -116,9 +117,9 @@ R32
 !i113 1
 R33
 R26
-Ei2c_master_adv_tb
-Z35 w1605880745
-Z36 DPx9 uvvm_util 11 i2c_bfm_pkg 0 22 2k`>ehFIoiQMFn>mzXSRY2
+Ei2c_avalon_mm_if_tb
+Z36 w1605988753
+Z37 DPx9 uvvm_util 17 avalon_mm_bfm_pkg 0 22 A8Y12;l[14X?BkfTG7ihz2
 R1
 R2
 R3
@@ -132,31 +133,145 @@ R10
 R11
 R12
 R13
-Z37 DPx4 work 14 i2c_master_pkg 0 22 H[=F=joZFKB3D7ncTz?Yg3
+Z38 DPx4 work 14 i2c_master_pkg 0 22 H[=F=joZFKB3D7ncTz?Yg3
 R14
 R15
 R16
 R17
-Z38 8../../tb/i2c_master_adv_tb.vhd
-Z39 F../../tb/i2c_master_adv_tb.vhd
+Z39 8../../tb/i2c_avalon_mm_if_tb.vhd
+Z40 F../../tb/i2c_avalon_mm_if_tb.vhd
+l0
+L26
+V?j7E8AeBRS`^z1>Rk7em<3
+!s100 1X]Ofml>i:gK6RWN<F:Ii0
+R20
+33
+R21
+!i10b 1
+R22
+Z41 !s90 -reportprogress|300|-2008|../../tb/i2c_avalon_mm_if_tb.vhd|
+Z42 !s107 ../../tb/i2c_avalon_mm_if_tb.vhd|
+!i113 1
+R25
+R26
+Atb
+R27
+R35
+R37
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+R12
+R13
+R38
+R14
+R15
+R16
+DEx4 work 19 i2c_avalon_mm_if_tb 0 22 ?j7E8AeBRS`^z1>Rk7em<3
+l87
+L30
+VF_3OhhkE>fa6=Ff7@>Zm91
+!s100 oYfa:Jo[VZ3?:h0IQY4Sc3
+R20
+33
+R21
+!i10b 1
+R22
+R41
+R42
+!i113 1
+R25
+R26
+Ei2c_master
+Z43 w1605973109
+R14
+R15
+R16
+R17
+Z44 8../../src/i2c_master.vhd
+Z45 F../../src/i2c_master.vhd
+l0
+L5
+VblBH0VWGfPc6dbTJ`8I?O0
+!s100 AKe7EVEBmiFBTSam9U;bi1
+R20
+33
+R21
+!i10b 1
+R22
+Z46 !s90 -reportprogress|300|-2008|-check_synthesis|../../src/i2c_master.vhd|
+Z47 !s107 ../../src/i2c_master.vhd|
+!i113 1
+R33
+R26
+Alogic
+R14
+R15
+R16
+R34
+l52
+L26
+VHWUbf32h6FRzVUCd4Hc_70
+!s100 3UDUj472eIADPWgMeoAi10
+R20
+33
+R21
+!i10b 1
+R22
+R46
+R47
+!i113 1
+R33
+R26
+Ei2c_master_adv_tb
+Z48 w1605880745
+Z49 DPx9 uvvm_util 11 i2c_bfm_pkg 0 22 2k`>ehFIoiQMFn>mzXSRY2
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+R12
+R13
+R38
+R14
+R15
+R16
+R17
+Z50 8../../tb/i2c_master_adv_tb.vhd
+Z51 F../../tb/i2c_master_adv_tb.vhd
 l0
 L26
 V8>5Gz53f]c6D^J>SW=mVO3
 !s100 <>OD>P?mHJe@eaW[jN_I`1
 R20
 33
-Z40 !s110 1605905746
+R21
 !i10b 1
 R22
-Z41 !s90 -reportprogress|300|-2008|../../tb/i2c_master_adv_tb.vhd|
-Z42 !s107 ../../tb/i2c_master_adv_tb.vhd|
+Z52 !s90 -reportprogress|300|-2008|../../tb/i2c_master_adv_tb.vhd|
+Z53 !s107 ../../tb/i2c_master_adv_tb.vhd|
 !i113 1
 R25
 R26
 Atb
 R27
 R34
-R36
+R49
 R1
 R2
 R3
@@ -170,22 +285,22 @@ R10
 R11
 R12
 R13
-R37
+R38
 R14
 R15
 R16
-Z43 DEx4 work 17 i2c_master_adv_tb 0 22 8>5Gz53f]c6D^J>SW=mVO3
+Z54 DEx4 work 17 i2c_master_adv_tb 0 22 8>5Gz53f]c6D^J>SW=mVO3
 l38
 L29
-Z44 VjKMEe[gAbZo3@hMfY^zm83
-Z45 !s100 6cMk:HOm`_CNcjm^S[X1W1
+Z55 VjKMEe[gAbZo3@hMfY^zm83
+Z56 !s100 6cMk:HOm`_CNcjm^S[X1W1
 R20
 33
-R40
+R21
 !i10b 1
 R22
-R41
-R42
+R52
+R53
 !i113 1
 R25
 R26
@@ -208,8 +323,8 @@ R15
 R16
 R0
 R17
-Z46 8../../tb/i2c_master_pkg.vhd
-Z47 F../../tb/i2c_master_pkg.vhd
+Z57 8../../tb/i2c_master_pkg.vhd
+Z58 F../../tb/i2c_master_pkg.vhd
 l0
 L19
 VH[=F=joZFKB3D7ncTz?Yg3
@@ -220,13 +335,13 @@ b1
 R21
 !i10b 1
 R22
-Z48 !s90 -reportprogress|300|-2008|../../tb/i2c_master_pkg.vhd|
-Z49 !s107 ../../tb/i2c_master_pkg.vhd|
+Z59 !s90 -reportprogress|300|-2008|../../tb/i2c_master_pkg.vhd|
+Z60 !s107 ../../tb/i2c_master_pkg.vhd|
 !i113 1
 R25
 R26
 Bbody
-R37
+R38
 R1
 R2
 R3
@@ -252,34 +367,34 @@ R20
 R21
 !i10b 1
 R22
-R48
-R49
+R59
+R60
 !i113 1
 R25
 R26
 Ei2c_master_tb
-Z50 w1605635571
+Z61 w1605635571
 R14
 R15
 R16
 R17
-Z51 8../../tb/i2c_master_tb.vhd
-Z52 F../../tb/i2c_master_tb.vhd
+Z62 8../../tb/i2c_master_tb.vhd
+Z63 F../../tb/i2c_master_tb.vhd
 l0
 L5
 VWUJjHSI5g[`z?0NN]h[[X0
 !s100 hm]m9Ia1ReI[04eGgl_JY0
 R20
 32
-Z53 !s110 1605636547
+Z64 !s110 1605955632
 !i10b 1
-Z54 !s108 1605636547.000000
-Z55 !s90 -reportprogress|300|../../tb/i2c_master_tb.vhd|
-Z56 !s107 ../../tb/i2c_master_tb.vhd|
+Z65 !s108 1605955632.000000
+Z66 !s90 -reportprogress|300|../../tb/i2c_master_tb.vhd|
+Z67 !s107 ../../tb/i2c_master_tb.vhd|
 !i113 1
 R26
 Atb
-R34
+DEx4 work 10 i2c_master 0 22 _I^UDHC;2fLAh4Jm<X0GO1
 R14
 R15
 R16
@@ -290,10 +405,10 @@ V?iJEjddjZ^=Q3ZOZC0<2A2
 !s100 k4@cdYid?592P`QdhgmO<2
 R20
 32
-R53
+R64
 !i10b 1
-R54
-R55
-R56
+R65
+R66
+R67
 !i113 1
 R26

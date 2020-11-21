@@ -4,8 +4,8 @@ USE ieee.numeric_std.ALL;
 
 Entity i2c_master IS
     GENERIC (
-        GC_SYSTEM_CLK : INTEGER := 50_000_000;
-        GC_I2C_CLK : INTEGER := 200_000
+        GC_SYSTEM_CLK : INTEGER:=500000000 ;
+        GC_I2C_CLK : INTEGER:=200000
     );
 
     PORT (
