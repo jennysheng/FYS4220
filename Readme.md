@@ -9,10 +9,10 @@
  - Problem 4: <  completed >
 
 ## Embedded system project
- - Problem 1:  <  completed >
- - Problem 2: < started >
- - Problem 3: < not started | started | completed >
- - Problem 4: < not started | started | completed >
+ - Problem 5:  <  completed >
+ - Problem 6: < started >
+ - Problem 7: < started>
+ - Problem 8: < not started | started | completed >
 
 
  # Answers to assignment questions
@@ -102,3 +102,33 @@ slave address is predefined, in phycial board, they should be responded by the s
 b) What is the purpose of the busy signal?
 
 to make the line busy, not interrupt by other signal.
+
+### Excercise 6:  Advanced test benches
+a) Which function is available in the UVVM utility library to write log messages to a file?
+log(...).
+
+b) Which function is available in the UVVM utility library to generate a clock signal to be used in the test bench?
+vet ikke.
+
+
+c) Why is the wait for 0 ns statement included in VHDL code below?
+
+reg_addr_use <= reg_addr_device_id;
+wait for 0 ns;
+read_i2c(i2c_addr_adxl345, reg_addr_use, data_array_rd, 1);
+
+ buffer the device address, maybe?
+ 
+d) What is the main purpose or advantage of adding the overloaded functions write_i2c and read_i2c in the i2c_master_adv_tb.vhd file?
+vet ikke;
+
+
+e) What is the VHDL conditional statement that can be used to detect a rising edge on the busy signal from the I2C master module?
+
+risingedge(clk);
+
+
+
+
+
+
