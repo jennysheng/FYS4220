@@ -1,3 +1,0 @@
-[submodule "i2c_master/UVVM_Light"]
-	path = i2c_master/UVVM_Light
-	url = https://github.com/UVVM/UVVM_Light.git

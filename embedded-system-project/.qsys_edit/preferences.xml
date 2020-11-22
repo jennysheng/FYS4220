@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="47" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Memory Interfaces and Controllers/Memory Interfaces with ALTMEMPHY,Library/Processors and Peripherals/Hard Processor Components,Library/Memory Interfaces and Controllers/SDRAM,Library,Library/Memory Interfaces and Controllers,Library/Memory Interfaces and Controllers/Memory Interfaces with UniPHY,Library/Processors and Peripherals" />
+ <window width="662" height="800" x="1008" y="33" />
+</preferences>

@@ -1,0 +1,381 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+cd C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/simulation/modelsim/work
+cd C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/i2c_master/simulation/modelsim
+# reading modelsim.ini
+do ../../scripts/compile_and_sim_all.do
+# 
+# User specified uvvm_light and target directory
+# 
+# 
+# 
+# === Compiling UVVM Util to directory: ../../UVVM_light/sim
+# 
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/types_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/adaptations_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/string_methods_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/protected_types_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/global_signals_and_shared_variables_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/hierarchy_linked_list_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/alert_hierarchy_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/license_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/methods_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/bfm_common_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/generic_queue_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/data_queue_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/data_fifo_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/data_stack_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util ../../UVVM_light//src_util/uvvm_util_context.vhd
+# 
+# 
+# 
+# === Compiling UVVM BFMs to directory: ../../UVVM_light/sim
+# 
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util  ../../UVVM_light//src_bfm/avalon_mm_bfm_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util  ../../UVVM_light//src_bfm/avalon_st_bfm_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util  ../../UVVM_light//src_bfm/axilite_bfm_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util  ../../UVVM_light//src_bfm/axistream_bfm_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util  ../../UVVM_light//src_bfm/axi_bfm_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util  ../../UVVM_light//src_bfm/gmii_bfm_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util  ../../UVVM_light//src_bfm/gpio_bfm_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util  ../../UVVM_light//src_bfm/i2c_bfm_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util  ../../UVVM_light//src_bfm/rgmii_bfm_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util  ../../UVVM_light//src_bfm/sbi_bfm_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util  ../../UVVM_light//src_bfm/spi_bfm_pkg.vhd
+# eval vcom -quiet -suppress 1346,1236,1090 -2008 -work uvvm_util  ../../UVVM_light//src_bfm/uart_bfm_pkg.vhd
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:55:45 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -check_synthesis ../../src/i2c_master.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_master
+# -- Compiling architecture logic of i2c_master
+# End time: 21:55:45 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:55:45 on Nov 20,2020
+# vcom -reportprogress 300 -2008 ../../tb/adxl345_simmodel.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading context declaration uvvm_util_context
+# -- Loading package types_pkg
+# -- Loading package adaptations_pkg
+# -- Loading package MATH_REAL
+# -- Loading package string_methods_pkg
+# -- Loading package protected_types_pkg
+# -- Loading package global_signals_and_shared_variables_pkg
+# -- Loading package hierarchy_linked_list_pkg
+# -- Loading package license_pkg
+# -- Loading package alert_hierarchy_pkg
+# -- Loading package methods_pkg
+# -- Loading package bfm_common_pkg
+# -- Compiling entity adxl345_simmodel
+# -- Compiling architecture logic of adxl345_simmodel
+# End time: 21:55:45 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:55:45 on Nov 20,2020
+# vcom -reportprogress 300 -2008 ../../tb/i2c_master_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading context declaration uvvm_util_context
+# -- Loading package types_pkg
+# -- Loading package adaptations_pkg
+# -- Loading package MATH_REAL
+# -- Loading package string_methods_pkg
+# -- Loading package protected_types_pkg
+# -- Loading package global_signals_and_shared_variables_pkg
+# -- Loading package hierarchy_linked_list_pkg
+# -- Loading package license_pkg
+# -- Loading package alert_hierarchy_pkg
+# -- Loading package methods_pkg
+# -- Loading package bfm_common_pkg
+# -- Compiling package i2c_master_pkg
+# ** Warning: ../../tb/i2c_master_pkg.vhd(40): (vcom-1013) Initial value of "C_SCL_PERIOD" depends on value of signal "clk_period".
+# -- Compiling package body i2c_master_pkg
+# -- Loading context declaration uvvm_util_context
+# -- Loading package i2c_master_pkg
+# End time: 21:55:45 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:55:45 on Nov 20,2020
+# vcom -reportprogress 300 -2008 ../../tb/i2c_master_adv_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading context declaration uvvm_util_context
+# -- Loading package types_pkg
+# -- Loading package adaptations_pkg
+# -- Loading package MATH_REAL
+# -- Loading package string_methods_pkg
+# -- Loading package protected_types_pkg
+# -- Loading package global_signals_and_shared_variables_pkg
+# -- Loading package hierarchy_linked_list_pkg
+# -- Loading package license_pkg
+# -- Loading package alert_hierarchy_pkg
+# -- Loading package methods_pkg
+# -- Loading package bfm_common_pkg
+# -- Loading package i2c_master_pkg
+# -- Loading context declaration uvvm_util_context
+# -- Loading context declaration uvvm_util_context
+# -- Loading package i2c_bfm_pkg
+# -- Compiling entity i2c_master_adv_tb
+# -- Compiling architecture tb of i2c_master_adv_tb
+# -- Loading entity i2c_master
+# -- Loading context declaration uvvm_util_context
+# -- Loading entity adxl345_simmodel
+# End time: 21:55:46 on Nov 20,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim i2c_master_adv_tb 
+# Start time: 21:55:46 on Nov 20,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading std.env(body)
+# Loading uvvm_util.types_pkg(body)
+# Loading uvvm_util.adaptations_pkg(body)
+# Loading ieee.math_real(body)
+# Loading uvvm_util.string_methods_pkg(body)
+# Loading uvvm_util.protected_types_pkg(body)
+# Loading uvvm_util.global_signals_and_shared_variables_pkg
+# Loading uvvm_util.hierarchy_linked_list_pkg(body)
+# Loading uvvm_util.license_pkg(body)
+# Loading uvvm_util.alert_hierarchy_pkg(body)
+# Loading uvvm_util.methods_pkg(body)
+# ** Note: 
+# 
+# 
+# *****************************************************************************************************
+#  This is a *** LICENSED PRODUCT *** as given in the LICENSE.TXT in the root directory.
+# *****************************************************************************************************
+# 
+# 
+#    Time: 0 ps  Iteration: 0  Region: /methods_pkg File: ../../UVVM_light/src_util/methods_pkg.vhd
+# ** Note: 
+# 
+# =====================================================================================================
+# =====================================================================================================
+# This info section may be turned off via C_SHOW_UVVM_UTILITY_LIBRARY_INFO in adaptations_pkg.vhd
+# 
+# Important Simulator setup: 
+# - Set simulator to break on severity 'FAILURE' 
+# - Set simulator transcript to a monospace font (e.g. Courier new)
+# 
+# UVVM Utility Library setup:
+# - It is recommended to go through the two powerpoint presentations provided with the download
+# - There is a Quick-Reference in the doc-directory
+# - In order to change layout or behaviour - please check the src*/adaptations_pkg.vhd
+#   This is intended for personal or company customization
+# 
+# License conditions are given in LICENSE.TXT
+# =====================================================================================================
+# =====================================================================================================
+# 
+# 
+#    Time: 0 ps  Iteration: 0  Region: /methods_pkg File: ../../UVVM_light/src_util/methods_pkg.vhd
+# Loading uvvm_util.bfm_common_pkg(body)
+# Loading work.i2c_master_pkg(body)
+# Loading uvvm_util.i2c_bfm_pkg(body)
+# Loading work.i2c_master_adv_tb(tb)
+# Loading work.i2c_master(logic)
+# Loading work.adxl345_simmodel(logic)
+# ** Warning: Design size of 15992 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# .main_pane.wave.interior.cs.body.pw.wf
+# UVVM: ID_UTIL_SETUP                      0.0 ns  TB seq.                        incremented expected WARNINGs by 1. 
+# UVVM:      
+# UVVM:      --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# UVVM:      ***  REPORT OF GLOBAL CTRL ***
+# UVVM:      --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# UVVM:                                IGNORE    STOP_LIMIT
+# UVVM:                NOTE         :  REGARD         0
+# UVVM:                TB_NOTE      :  REGARD         0
+# UVVM:                WARNING      :  REGARD         0
+# UVVM:                TB_WARNING   :  REGARD         0
+# UVVM:                MANUAL_CHECK :  REGARD         0
+# UVVM:                ERROR        :  REGARD         1
+# UVVM:                TB_ERROR     :  REGARD         1
+# UVVM:                FAILURE      :  REGARD         1
+# UVVM:                TB_FAILURE   :  REGARD         1
+# UVVM:      --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# UVVM:      
+# UVVM:      
+# UVVM:      --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# UVVM:      ***  REPORT OF MSG ID PANEL ***
+# UVVM:      --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# UVVM:                ID                             Status
+# UVVM:                ------------------------       ------
+# UVVM:                ID_UTIL_BURIED               : DISABLED
+# UVVM:                ID_BITVIS_DEBUG              : DISABLED
+# UVVM:                ID_UTIL_SETUP                : ENABLED
+# UVVM:                ID_LOG_MSG_CTRL              : ENABLED
+# UVVM:                ID_ALERT_CTRL                : ENABLED
+# UVVM:                ID_FINISH_OR_STOP            : ENABLED
+# UVVM:                ID_CLOCK_GEN                 : ENABLED
+# UVVM:                ID_GEN_PULSE                 : ENABLED
+# UVVM:                ID_BLOCKING                  : ENABLED
+# UVVM:                ID_WATCHDOG                  : ENABLED
+# UVVM:                ID_POS_ACK                   : ENABLED
+# UVVM:                ID_LOG_HDR                   : ENABLED
+# UVVM:                ID_LOG_HDR_LARGE             : ENABLED
+# UVVM:                ID_LOG_HDR_XL                : ENABLED
+# UVVM:                ID_SEQUENCER                 : ENABLED
+# UVVM:                ID_SEQUENCER_SUB             : ENABLED
+# UVVM:                ID_BFM                       : ENABLED
+# UVVM:                ID_BFM_WAIT                  : ENABLED
+# UVVM:                ID_BFM_POLL                  : ENABLED
+# UVVM:                ID_BFM_POLL_SUMMARY          : ENABLED
+# UVVM:                ID_CHANNEL_BFM               : ENABLED
+# UVVM:                ID_TERMINATE_CMD             : ENABLED
+# UVVM:                ID_SEGMENT_INITIATE          : ENABLED
+# UVVM:                ID_SEGMENT_COMPLETE          : ENABLED
+# UVVM:                ID_SEGMENT_HDR               : ENABLED
+# UVVM:                ID_SEGMENT_DATA              : ENABLED
+# UVVM:                ID_PACKET_INITIATE           : ENABLED
+# UVVM:                ID_PACKET_PREAMBLE           : ENABLED
+# UVVM:                ID_PACKET_COMPLETE           : ENABLED
+# UVVM:                ID_PACKET_HDR                : ENABLED
+# UVVM:                ID_PACKET_DATA               : ENABLED
+# UVVM:                ID_PACKET_CHECKSUM           : ENABLED
+# UVVM:                ID_PACKET_GAP                : ENABLED
+# UVVM:                ID_FRAME_INITIATE            : ENABLED
+# UVVM:                ID_FRAME_COMPLETE            : ENABLED
+# UVVM:                ID_FRAME_HDR                 : ENABLED
+# UVVM:                ID_FRAME_DATA                : ENABLED
+# UVVM:                ID_COVERAGE_MAKEBIN          : DISABLED
+# UVVM:                ID_COVERAGE_ADDBIN           : DISABLED
+# UVVM:                ID_COVERAGE_ICOVER           : DISABLED
+# UVVM:                ID_COVERAGE_CONFIG           : ENABLED
+# UVVM:                ID_COVERAGE_SUMMARY          : ENABLED
+# UVVM:                ID_COVERAGE_HOLES            : ENABLED
+# UVVM:                ID_UVVM_SEND_CMD             : ENABLED
+# UVVM:                ID_UVVM_CMD_ACK              : ENABLED
+# UVVM:                ID_UVVM_CMD_RESULT           : ENABLED
+# UVVM:                ID_CMD_INTERPRETER           : ENABLED
+# UVVM:                ID_CMD_INTERPRETER_WAIT      : ENABLED
+# UVVM:                ID_IMMEDIATE_CMD             : ENABLED
+# UVVM:                ID_IMMEDIATE_CMD_WAIT        : ENABLED
+# UVVM:                ID_CMD_EXECUTOR              : ENABLED
+# UVVM:                ID_CMD_EXECUTOR_WAIT         : ENABLED
+# UVVM:                ID_CHANNEL_EXECUTOR          : ENABLED
+# UVVM:                ID_CHANNEL_EXECUTOR_WAIT     : ENABLED
+# UVVM:                ID_NEW_HVVC_CMD_SEQ          : ENABLED
+# UVVM:                ID_INSERTED_DELAY            : ENABLED
+# UVVM:                ID_OLD_AWAIT_COMPLETION      : ENABLED
+# UVVM:                ID_AWAIT_COMPLETION          : ENABLED
+# UVVM:                ID_AWAIT_COMPLETION_LIST     : ENABLED
+# UVVM:                ID_AWAIT_COMPLETION_WAIT     : ENABLED
+# UVVM:                ID_AWAIT_COMPLETION_END      : ENABLED
+# UVVM:                ID_UVVM_DATA_QUEUE           : ENABLED
+# UVVM:                ID_CONSTRUCTOR               : ENABLED
+# UVVM:                ID_CONSTRUCTOR_SUB           : ENABLED
+# UVVM:                ID_VVC_ACTIVITY              : ENABLED
+# UVVM:                ID_MONITOR                   : ENABLED
+# UVVM:                ID_MONITOR_ERROR             : ENABLED
+# UVVM:                ID_DATA                      : ENABLED
+# UVVM:                ID_CTRL                      : ENABLED
+# UVVM:                ID_FILE_OPEN_CLOSE           : ENABLED
+# UVVM:                ID_FILE_PARSER               : ENABLED
+# UVVM:                ID_SPEC_COV                  : ENABLED
+# UVVM:      --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# UVVM:      
+# UVVM: ID_LOG_MSG_CTRL                    0.0 ns  TB seq.                        enable_log_msg(ALL_MESSAGES). 
+# UVVM: ID_LOG_MSG_CTRL                    0.0 ns  TB seq.                        disable_log_msg(ID_POS_ACK). 
+# UVVM: 
+# UVVM: 
+# UVVM: ID_LOG_HDR                         0.0 ns  TB seq.                        Start Simulation of TB for I2C master
+# UVVM: -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# UVVM: 
+# UVVM: 
+# UVVM: ID_LOG_HDR                         0.0 ns  TB seq.                        Set default values for I2C master I/O and enable clock and reset system
+# UVVM: -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# UVVM: ID_CLOCK_GEN                       0.0 ns  TB seq.                        Starting clock TB clock
+# UVVM: ID_SEQUENCER_SUB                   0.0 ns  adxl345 model                  STOP condition detected
+# UVVM: ID_SEQUENCER_SUB                 110.0 ns  TB seq.                        Activate async. reset
+# UVVM: 
+# UVVM: 
+# UVVM: ID_LOG_HDR                       150.0 ns  TB seq.                        Reading device ID register
+# UVVM: -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# UVVM: ID_SEQUENCER_SUB                3860.0 ns  adxl345 model                  START condition detected
+# UVVM: ID_SEQUENCER_SUB               50100.0 ns  adxl345 model                  Ack Address adxl345
+# UVVM: ID_SEQUENCER_SUB               90100.0 ns  adxl345 model                  Register address: 00000000 detected.
+# UVVM: ID_SEQUENCER_SUB               95100.0 ns  adxl345 model                  Ack Data adxl345
+# UVVM: ID_SEQUENCER_SUB               98860.0 ns  adxl345 model                  RESTART condition detected
+# UVVM: ID_SEQUENCER_SUB              145100.0 ns  adxl345 model                  Ack Address adxl345
+# UVVM: ID_SEQUENCER_SUB              185100.0 ns  adxl345 model                  Read Device ID reg. of value: 11100101
+# UVVM: ID_SEQUENCER_SUB              190100.0 ns  adxl345 model                  Master NACK detected
+# UVVM: ID_SEQUENCER_SUB              193860.0 ns  adxl345 model                  STOP condition detected
+# UVVM: 
+# UVVM: 
+# UVVM: ID_LOG_HDR                    196380.0 ns  TB seq.                        Writing to device ID register
+# UVVM: -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# UVVM: ID_SEQUENCER_SUB              203860.0 ns  adxl345 model                  START condition detected
+# UVVM: ID_SEQUENCER_SUB              250100.0 ns  adxl345 model                  Ack Address adxl345
+# UVVM: ID_SEQUENCER_SUB              290100.0 ns  adxl345 model                  Register address: 00000000 detected.
+# UVVM: ID_SEQUENCER_SUB              295100.0 ns  adxl345 model                  Ack Data adxl345
+# UVVM: 
+# UVVM: ***  WARNING #1  ***
+# UVVM:        335100 ns   adxl345 model
+# UVVM:                    Device ID reg is read only!
+# UVVM: 
+# UVVM: ID_SEQUENCER_SUB              340100.0 ns  adxl345 model                  Ack Data adxl345
+# UVVM: ID_SEQUENCER_SUB              343860.0 ns  adxl345 model                  STOP condition detected
+# UVVM: 
+# UVVM: 
+# UVVM: ID_LOG_HDR                    346380.0 ns  TB seq.                        Setting and check Data Format register
+# UVVM: -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# UVVM: ID_SEQUENCER_SUB              353860.0 ns  adxl345 model                  START condition detected
+# UVVM: ID_SEQUENCER_SUB              400100.0 ns  adxl345 model                  Ack Address adxl345
+# UVVM: ID_SEQUENCER_SUB              440100.0 ns  adxl345 model                  Register address: 00110001 detected.
+# UVVM: ID_SEQUENCER_SUB              445100.0 ns  adxl345 model                  Ack Data adxl345
+# UVVM: ID_SEQUENCER_SUB              485100.0 ns  adxl345 model                  Updated Data Format .reg. to: 00000010
+# UVVM: ID_SEQUENCER_SUB              485100.0 ns  adxl345 model                  Setting accel. range to 8g
+# UVVM: ID_SEQUENCER_SUB              490100.0 ns  adxl345 model                  Ack Data adxl345
+# UVVM: ID_SEQUENCER_SUB              493860.0 ns  adxl345 model                  STOP condition detected
+# UVVM: ID_SEQUENCER_SUB              503860.0 ns  adxl345 model                  START condition detected
+# UVVM: ID_SEQUENCER_SUB              550100.0 ns  adxl345 model                  Ack Address adxl345
+# UVVM: ID_SEQUENCER_SUB              590100.0 ns  adxl345 model                  Register address: 00110001 detected.
+# UVVM: ID_SEQUENCER_SUB              595100.0 ns  adxl345 model                  Ack Data adxl345
+# UVVM: ID_SEQUENCER_SUB              598860.0 ns  adxl345 model                  RESTART condition detected
+# UVVM: ID_SEQUENCER_SUB              645100.0 ns  adxl345 model                  Ack Address adxl345
+# UVVM: ID_SEQUENCER_SUB              685100.0 ns  adxl345 model                  Read Data Format .reg. of value: 00000010
+# UVVM: ID_SEQUENCER_SUB              690100.0 ns  adxl345 model                  Master NACK detected
+# UVVM: ID_SEQUENCER_SUB              693860.0 ns  adxl345 model                  STOP condition detected
+# UVVM:      
+# UVVM:      ====================================================================================================================================================================
+# UVVM:      *** FINAL SUMMARY OF ALL ALERTS ***
+# UVVM:      ====================================================================================================================================================================
+# UVVM:                                REGARDED   EXPECTED  IGNORED      Comment?
+# UVVM:                NOTE         :      0         0         0         ok
+# UVVM:                TB_NOTE      :      0         0         0         ok
+# UVVM:                WARNING      :      1         1         0         ok
+# UVVM:                TB_WARNING   :      0         0         0         ok
+# UVVM:                MANUAL_CHECK :      0         0         0         ok
+# UVVM:                ERROR        :      0         0         0         ok
+# UVVM:                TB_ERROR     :      0         0         0         ok
+# UVVM:                FAILURE      :      0         0         0         ok
+# UVVM:                TB_FAILURE   :      0         0         0         ok
+# UVVM:      ====================================================================================================================================================================
+# UVVM:      >> Simulation SUCCESS: No mismatch between counted and expected serious alerts
+# UVVM:      ====================================================================================================================================================================
+# UVVM:      
+# UVVM:      
+# UVVM: 
+# UVVM: 
+# UVVM: ID_LOG_HDR                    697380.0 ns  TB seq.                        SIMULATION COMPLETED
+# UVVM: -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# UVVM: ID_CLOCK_GEN                  697400.0 ns  TB seq.                        Stopping clock TB clock

@@ -1,0 +1,12 @@
+
+State Machine - |i2c_master|state
+Name state.sSTOP state.sMACK state.sREAD state.sACK2 state.sWRITE state.sACK1 state.sADDR state.sSTART state.sIDLE 
+state.sIDLE 0 0 0 0 0 0 0 0 0 
+state.sSTART 0 0 0 0 0 0 0 1 1 
+state.sADDR 0 0 0 0 0 0 1 0 1 
+state.sACK1 0 0 0 0 0 1 0 0 1 
+state.sWRITE 0 0 0 0 1 0 0 0 1 
+state.sACK2 0 0 0 1 0 0 0 0 1 
+state.sREAD 0 0 1 0 0 0 0 0 1 
+state.sMACK 0 1 0 0 0 0 0 0 1 
+state.sSTOP 1 0 0 0 0 0 0 0 1 
