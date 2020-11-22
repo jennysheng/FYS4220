@@ -44,7 +44,7 @@ ARCHITECTURE memoryRW OF i2c_avalon_mm_if IS
     SIGNAL read_reg : STD_LOGIC_VECTOR(63 DOWNTO 0);-- read_reg(31 downto 0)	0x3	32	R	Data read from I2C device
     --ALIAS read_reg : STD_LOGIC_VECTOR(63 DOWNTO 32);-- read_reg(63 downto 32)	0x4	32	R	Data read from I2C device
     SIGNAL i2c_valid, cmd_rst, i2c_busy_sc, i2c_ack_error, i2c_rnw, mm_if_busy_state : STD_LOGIC;---???? why not alias?
-    SIGNAL addr : STD_LOGIC_VECTOR (6 DOWNTO 0);
+    SIGNAL i2c_addr : STD_LOGIC_VECTOR (6 DOWNTO 0);
     SIGNAL i2c_data_wr : STD_LOGIC_VECTOR (7 DOWNTO 0);
     SIGNAL i2c_data_rd : STD_LOGIC_VECTOR (7 DOWNTO 0);
     ---state machine variable-----------------------------------------------------------------
@@ -71,7 +71,7 @@ BEGIN
             clk => clk,
             arst_n => reset_n,
             valid => i2c_valid,
-            addr => i2c_device_addr,
+            addr => i2c_addr,
             rnw => i2c_rnw,
             data_wr => i2c_data_wr,
             data_rd => i2c_data_rd,
@@ -153,18 +153,12 @@ BEGIN
 
         VARIABLE byte_count : INTEGER RANGE 0 TO 7;
     BEGIN
-        IF cmd_rst = '1' THEN
-            cmd <= '0';
-        END IF;
+
         IF reset_n = '0' THEN
             state <= sIDLE;
             byte_count := 0;
-            cmd_rst <= '0';
-            i2c_rnw <= '0';
         ELSIF rising_edge(clk) THEN
-            busy <= i2c_busy_sc; -- store busy from i2c_master in busy bit of ctrl_reg
 
-            cmd_rst <= '0';
             CASE state IS
 
                 WHEN sIDLE =>
@@ -179,27 +173,24 @@ BEGIN
                         state <= sADDR;
                     ELSE
                         state <= sIDLE;
-                        cmd_rst <= '0';
-
                     END IF;
 
                 WHEN sADDR =>
                     mm_if_busy_state <= '1';
-
                     i2c_data_wr <= i2c_int_addr;
-                    addr <= i2c_device_addr;
-                    rnw <= i2c_rnw;---- correct??
+                    i2c_addr <= i2c_device_addr;
+                    i2c_rnw <= rnw;---- correct??
                     i2c_valid <= '1';
 
                     IF (busy = '0' AND i2c_busy_sc = '1') THEN--rising edge busy
                         state <= sWAIT_DATA;
-                        i2c_busy_sc <= '0';
+                    
                     END IF;
 
                 WHEN sWAIT_DATA =>
                     mm_if_busy_state <= '1';
                     IF (busy = '1' AND i2c_busy_sc = '0') THEN--falling edge busy
-                        IF i2c_rnw = '1' THEN
+                        IF rnw = '1' THEN
                             read_reg(((8 * byte_count) - 1) DOWNTO (8 * (byte_count - 1))) <= i2c_data_rd;
                             byte_count := byte_count - 1;
                             IF byte_count = 0 THEN
@@ -222,18 +213,19 @@ BEGIN
                     i2c_valid <= '0';
                     IF (busy = '1'AND i2c_busy_sc = '0') THEN--falling edge busy
                         state <= sIDLE;
-                        
+
                     END IF;
                 WHEN sWRITE_DATA =>
                     mm_if_busy_state <= '1';
                     i2c_data_wr <= write_reg(((8 * byte_count) - 1) DOWNTO (8 * (byte_count - 1)));
-                    IF (busy = '1'AND i2c_busy_sc = '0') THEN--falling edge busy
+                    IF (busy = '0'AND i2c_busy_sc = '1') THEN--rising edge busy
                         byte_count := (byte_count - 1);
                         state <= sWAIT_DATA;
                     END IF;
                 WHEN OTHERS =>
                     state <= sIDLE;
-                    cmd <= '0';
+                    cmd_rst <= '0';
+
             END CASE;
 
         END IF;
