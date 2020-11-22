@@ -7,7 +7,6 @@
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Memory Interfaces and Controllers/Memory Interfaces with ALTMEMPHY,Library/Processors and Peripherals/Hard Processor Components,Library/Memory Interfaces and Controllers/SDRAM,Library,Library/Memory Interfaces and Controllers,Library/Memory Interfaces and Controllers/Memory Interfaces with UniPHY,Library/Processors and Peripherals" />
- <window width="662" height="800" x="1008" y="33" />
+ <library expandedCategories="Library,Project" />
+ <window width="1942" height="1042" x="-11" y="-11" />
 </preferences>

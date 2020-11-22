@@ -188,7 +188,7 @@ BEGIN
                         ack_error_i <= '1';
                     END IF;
                     IF state_ena = '1' THEN
-                        IF rnw = '0' THEN
+                        IF rnw_i = '0' THEN
                             state <= sWRITE;
                         ELSE
                             state <= sREAD;
