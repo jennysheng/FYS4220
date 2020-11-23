@@ -7,8 +7,7 @@
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Basic Functions,Library,Project,Library/Basic Functions/On Chip Memory" />
+ <library expandedCategories="Project/fys4220,Project,Library" />
  <window width="1942" height="1042" x="-11" y="-11" />
  <generation synthesis="VHDL" block_symbol_file="0" />
 </preferences>
