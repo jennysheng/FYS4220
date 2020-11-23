@@ -1,0 +1,26 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nios2_system.onchip_mem -pg 1 -lvl 3 -y 130
+preplace inst nios2_system -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst nios2_system.jtag_uart -pg 1 -lvl 3 -y 430
+preplace inst nios2_system.cpu.cpu -pg 1
+preplace inst nios2_system.sysid -pg 1 -lvl 3 -y 630
+preplace inst nios2_system.cpu.reset_bridge -pg 1
+preplace inst nios2_system.sys_clk_timer -pg 1 -lvl 3 -y 530
+preplace inst nios2_system.led_pio -pg 1 -lvl 3 -y 30
+preplace inst nios2_system.cpu -pg 1 -lvl 2 -y 270
+preplace inst nios2_system.interrupt_pio -pg 1 -lvl 3 -y 310
+preplace inst nios2_system.sw_pio -pg 1 -lvl 3 -y 210
+preplace inst nios2_system.cpu.clock_bridge -pg 1
+preplace inst nios2_system.sys_clk -pg 1 -lvl 1 -y 290
+preplace netloc EXPORT<net_container>nios2_system</net_container>(SLAVE)nios2_system.reset,(SLAVE)sys_clk.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios2_system</net_container>(SLAVE)nios2_system.sw_pio_external_connection,(SLAVE)sw_pio.external_connection) 1 0 3 NJ 210 NJ 210 NJ
+preplace netloc FAN_OUT<net_container>nios2_system</net_container>(SLAVE)sys_clk_timer.clk,(SLAVE)sysid.clk,(SLAVE)onchip_mem.clk1,(SLAVE)cpu.clk,(SLAVE)sw_pio.clk,(SLAVE)interrupt_pio.clk,(SLAVE)led_pio.clk,(SLAVE)jtag_uart.clk,(MASTER)sys_clk.clk) 1 1 2 430 410 890
+preplace netloc EXPORT<net_container>nios2_system</net_container>(SLAVE)nios2_system.interrupt_pio_external_connection,(SLAVE)interrupt_pio.external_connection) 1 0 3 NJ 230 NJ 230 NJ
+preplace netloc FAN_OUT<net_container>nios2_system</net_container>(SLAVE)jtag_uart.irq,(MASTER)cpu.irq,(SLAVE)interrupt_pio.irq,(SLAVE)sys_clk_timer.irq) 1 2 1 850
+preplace netloc EXPORT<net_container>nios2_system</net_container>(SLAVE)sys_clk.clk_in,(SLAVE)nios2_system.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios2_system</net_container>(SLAVE)nios2_system.led_pio_external_connection,(SLAVE)led_pio.external_connection) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc INTERCONNECT<net_container>nios2_system</net_container>(MASTER)cpu.debug_reset_request,(SLAVE)sys_clk_timer.reset,(SLAVE)interrupt_pio.reset,(SLAVE)cpu.reset,(SLAVE)onchip_mem.reset1,(SLAVE)led_pio.reset,(SLAVE)sw_pio.reset,(SLAVE)sysid.reset,(MASTER)sys_clk.clk_reset,(SLAVE)jtag_uart.reset) 1 1 2 410 430 810
+preplace netloc INTERCONNECT<net_container>nios2_system</net_container>(SLAVE)sysid.control_slave,(SLAVE)onchip_mem.s1,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)sw_pio.s1,(SLAVE)cpu.debug_mem_slave,(SLAVE)sys_clk_timer.s1,(SLAVE)interrupt_pio.s1,(MASTER)cpu.instruction_master,(SLAVE)led_pio.s1,(MASTER)cpu.data_master) 1 1 2 450 450 830
+levelinfo -pg 1 0 200 1090
+levelinfo -hier nios2_system 210 240 570 930 1080

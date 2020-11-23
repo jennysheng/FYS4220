@@ -1,0 +1,307 @@
+Analysis & Synthesis report for system_top
+Mon Nov 23 17:10:01 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Mon Nov 23 17:10:01 2020           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; system_top                                  ;
+; Top-level Entity Name              ; system_top                                  ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; system_top         ; system_top         ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon Nov 23 17:09:48 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off system_top -c system_top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file nios2_system/synthesis/nios2_system.vhd
+    Info (12022): Found design unit 1: nios2_system-rtl File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/nios2_system.vhd Line: 21
+    Info (12023): Found entity 1: nios2_system File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/nios2_system.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file nios2_system/synthesis/nios2_system_rst_controller.vhd
+    Info (12022): Found design unit 1: nios2_system_rst_controller-rtl File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/nios2_system_rst_controller.vhd Line: 75
+    Info (12023): Found entity 1: nios2_system_rst_controller File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/nios2_system_rst_controller.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file nios2_system/synthesis/nios2_system_rst_controller_001.vhd
+    Info (12022): Found design unit 1: nios2_system_rst_controller_001-rtl File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/nios2_system_rst_controller_001.vhd Line: 75
+    Info (12023): Found entity 1: nios2_system_rst_controller_001 File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/nios2_system_rst_controller_001.vhd Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/altera_reset_controller.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/altera_reset_synchronizer.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_irq_mapper.sv
+    Info (12023): Found entity 1: nios2_system_irq_mapper File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_irq_mapper.sv Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0.v
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0 File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_avalon_st_adapter.v
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0_avalon_st_adapter File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_avalon_st_adapter.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0 File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_rsp_mux_001.sv
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0_rsp_mux_001 File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_rsp_mux_001.sv Line: 51
+Info (12021): Found 2 design units, including 2 entities, in source file nios2_system/synthesis/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/altera_merlin_arbitrator.sv Line: 103
+    Info (12023): Found entity 2: altera_merlin_arb_adder File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/altera_merlin_arbitrator.sv Line: 228
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_rsp_mux.sv
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0_rsp_mux File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_rsp_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_rsp_demux_003.sv
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0_rsp_demux_003 File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_rsp_demux_003.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_rsp_demux.sv
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0_rsp_demux File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_rsp_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_cmd_mux_003.sv
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0_cmd_mux_003 File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_cmd_mux_003.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_cmd_mux.sv
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0_cmd_mux File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_cmd_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_cmd_demux_001.sv
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0_cmd_demux_001 File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_cmd_demux_001.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_cmd_demux.sv
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0_cmd_demux File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_cmd_demux.sv Line: 43
+Info (12021): Found 2 design units, including 2 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_router_005.sv
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0_router_005_default_decode File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_router_005.sv Line: 45
+    Info (12023): Found entity 2: nios2_system_mm_interconnect_0_router_005 File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_router_005.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_router_002.sv
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0_router_002_default_decode File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_router_002.sv Line: 45
+    Info (12023): Found entity 2: nios2_system_mm_interconnect_0_router_002 File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_router_002.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_router_001.sv
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0_router_001_default_decode File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_router_001.sv Line: 45
+    Info (12023): Found entity 2: nios2_system_mm_interconnect_0_router_001 File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_router_001.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_router.sv
+    Info (12023): Found entity 1: nios2_system_mm_interconnect_0_router_default_decode File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_router.sv Line: 45
+    Info (12023): Found entity 2: nios2_system_mm_interconnect_0_router File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_mm_interconnect_0_router.sv Line: 84
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/altera_avalon_sc_fifo.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/altera_merlin_slave_agent.sv
+    Info (12023): Found entity 1: altera_merlin_slave_agent File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/altera_merlin_slave_agent.sv Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/altera_merlin_master_agent.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/altera_merlin_slave_translator.sv Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/altera_merlin_master_translator.sv Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_sysid.v
+    Info (12023): Found entity 1: nios2_system_sysid File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_sysid.v Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_sys_clk_timer.v
+    Info (12023): Found entity 1: nios2_system_sys_clk_timer File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_sys_clk_timer.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_sw_pio.v
+    Info (12023): Found entity 1: nios2_system_sw_pio File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_sw_pio.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_onchip_mem.v
+    Info (12023): Found entity 1: nios2_system_onchip_mem File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_onchip_mem.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_led_pio.v
+    Info (12023): Found entity 1: nios2_system_led_pio File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_led_pio.v Line: 21
+Info (12021): Found 5 design units, including 5 entities, in source file nios2_system/synthesis/submodules/nios2_system_jtag_uart.v
+    Info (12023): Found entity 1: nios2_system_jtag_uart_sim_scfifo_w File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_jtag_uart.v Line: 21
+    Info (12023): Found entity 2: nios2_system_jtag_uart_scfifo_w File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_jtag_uart.v Line: 78
+    Info (12023): Found entity 3: nios2_system_jtag_uart_sim_scfifo_r File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_jtag_uart.v Line: 164
+    Info (12023): Found entity 4: nios2_system_jtag_uart_scfifo_r File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_jtag_uart.v Line: 243
+    Info (12023): Found entity 5: nios2_system_jtag_uart File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_jtag_uart.v Line: 331
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_interrupt_pio.v
+    Info (12023): Found entity 1: nios2_system_interrupt_pio File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_interrupt_pio.v Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file nios2_system/synthesis/submodules/i2c_avalon_mm_if.vhd
+    Info (12022): Found design unit 1: i2c_avalon_mm_if-memoryRW File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/i2c_avalon_mm_if.vhd Line: 24
+    Info (12023): Found entity 1: i2c_avalon_mm_if File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/i2c_avalon_mm_if.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file nios2_system/synthesis/submodules/i2c_master.vhd
+    Info (12022): Found design unit 1: i2c_master-logic File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/i2c_master.vhd Line: 26
+    Info (12023): Found entity 1: i2c_master File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/i2c_master.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_cpu.v
+    Info (12023): Found entity 1: nios2_system_cpu File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu.v Line: 9
+Info (12021): Found 21 design units, including 21 entities, in source file nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v
+    Info (12023): Found entity 1: nios2_system_cpu_cpu_register_bank_a_module File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 21
+    Info (12023): Found entity 2: nios2_system_cpu_cpu_register_bank_b_module File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 87
+    Info (12023): Found entity 3: nios2_system_cpu_cpu_nios2_oci_debug File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 153
+    Info (12023): Found entity 4: nios2_system_cpu_cpu_nios2_oci_break File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 295
+    Info (12023): Found entity 5: nios2_system_cpu_cpu_nios2_oci_xbrk File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 588
+    Info (12023): Found entity 6: nios2_system_cpu_cpu_nios2_oci_dbrk File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 795
+    Info (12023): Found entity 7: nios2_system_cpu_cpu_nios2_oci_itrace File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 982
+    Info (12023): Found entity 8: nios2_system_cpu_cpu_nios2_oci_td_mode File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 1115
+    Info (12023): Found entity 9: nios2_system_cpu_cpu_nios2_oci_dtrace File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 1183
+    Info (12023): Found entity 10: nios2_system_cpu_cpu_nios2_oci_compute_input_tm_cnt File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 1265
+    Info (12023): Found entity 11: nios2_system_cpu_cpu_nios2_oci_fifo_wrptr_inc File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 1337
+    Info (12023): Found entity 12: nios2_system_cpu_cpu_nios2_oci_fifo_cnt_inc File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 1380
+    Info (12023): Found entity 13: nios2_system_cpu_cpu_nios2_oci_fifo File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 1427
+    Info (12023): Found entity 14: nios2_system_cpu_cpu_nios2_oci_pib File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 1913
+    Info (12023): Found entity 15: nios2_system_cpu_cpu_nios2_oci_im File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 1936
+    Info (12023): Found entity 16: nios2_system_cpu_cpu_nios2_performance_monitors File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 2006
+    Info (12023): Found entity 17: nios2_system_cpu_cpu_nios2_avalon_reg File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 2023
+    Info (12023): Found entity 18: nios2_system_cpu_cpu_ociram_sp_ram_module File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 2116
+    Info (12023): Found entity 19: nios2_system_cpu_cpu_nios2_ocimem File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 2181
+    Info (12023): Found entity 20: nios2_system_cpu_cpu_nios2_oci File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 2362
+    Info (12023): Found entity 21: nios2_system_cpu_cpu File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu.v Line: 2834
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_cpu_cpu_debug_slave_sysclk.v
+    Info (12023): Found entity 1: nios2_system_cpu_cpu_debug_slave_sysclk File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu_debug_slave_sysclk.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_cpu_cpu_debug_slave_tck.v
+    Info (12023): Found entity 1: nios2_system_cpu_cpu_debug_slave_tck File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu_debug_slave_tck.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_cpu_cpu_debug_slave_wrapper.v
+    Info (12023): Found entity 1: nios2_system_cpu_cpu_debug_slave_wrapper File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu_debug_slave_wrapper.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios2_system/synthesis/submodules/nios2_system_cpu_cpu_test_bench.v
+    Info (12023): Found entity 1: nios2_system_cpu_cpu_test_bench File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/nios2_system/synthesis/submodules/nios2_system_cpu_cpu_test_bench.v Line: 21
+Error (10500): VHDL syntax error at system_top.vhd(32) near text "i2c_avalon_mm_if_conduit_end_sda_export";  expecting ";", or ")" File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/src/system_top.vhd Line: 32
+Error (10500): VHDL syntax error at system_top.vhd(63) near text "i2c_avalon_mm_if_conduit_end_sda_export";  expecting ")", or "," File: C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/src/system_top.vhd Line: 63
+Info (12021): Found 0 design units, including 0 entities, in source file src/system_top.vhd
+Info (144001): Generated suppressed messages file C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/output_files/system_top.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 4803 megabytes
+    Error: Processing ended: Mon Nov 23 17:10:02 2020
+    Error: Elapsed time: 00:00:14
+    Error: Total CPU time (on all processors): 00:00:28
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/JennySheng/Documents/FYS4220-Jenny-Sheng/embedded-system-project/output_files/system_top.map.smsg.
+
+
