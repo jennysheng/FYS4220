@@ -108,7 +108,8 @@ a) Which function is available in the UVVM utility library to write log messages
 log(...).
 
 b) Which function is available in the UVVM utility library to generate a clock signal to be used in the test bench?
-vet ikke.
+-- Bitvis clock generator
+  clock_generator(clk, clk_ena, clk_period, "TB clock");
 
 
 c) Why is the wait for 0 ns statement included in VHDL code below?
@@ -117,15 +118,15 @@ reg_addr_use <= reg_addr_device_id;
 wait for 0 ns;
 read_i2c(i2c_addr_adxl345, reg_addr_use, data_array_rd, 1);
 
- buffer the device address, maybe?
+ wait for the process to be updated.
  
 d) What is the main purpose or advantage of adding the overloaded functions write_i2c and read_i2c in the i2c_master_adv_tb.vhd file?
-vet ikke;
+To specify which signal in the i2c master are going to writen/read to/from.
 
 
 e) What is the VHDL conditional statement that can be used to detect a rising edge on the busy signal from the I2C master module?
 
-risingedge(clk);
+rising_edge(clk);
 
 
 
