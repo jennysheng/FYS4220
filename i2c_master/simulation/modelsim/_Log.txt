@@ -1,4 +1,4 @@
-UVVM: ID_UTIL_SETUP                      0.0 ns  TB seq.                        incremented expected WARNINGs by 1. 
+UVVM: ID_UTIL_SETUP                      0.0 ns  TB seq.                        incremented expected WARNINGs by 0. 
 UVVM:      
 UVVM:      --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 UVVM:      ***  REPORT OF GLOBAL CTRL ***
@@ -99,64 +99,93 @@ UVVM: ID_LOG_MSG_CTRL                    0.0 ns  TB seq.                        
 UVVM: ID_LOG_MSG_CTRL                    0.0 ns  TB seq.                        disable_log_msg(ID_POS_ACK). 
 UVVM: 
 UVVM: 
-UVVM: ID_LOG_HDR                         0.0 ns  TB seq.                        Start Simulation of TB for I2C master
+UVVM: ID_LOG_HDR                         0.0 ns  TB seq.                        Start Simulation of TB for I2C Avalon MM IF
 UVVM: -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-UVVM: 
-UVVM: 
-UVVM: ID_LOG_HDR                         0.0 ns  TB seq.                        Set default values for I2C master I/O and enable clock and reset system
-UVVM: -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+UVVM: ID_SEQUENCER                       0.0 ns  TB seq.                        Set default values for I/O and enable clock and reset system
 UVVM: ID_CLOCK_GEN                       0.0 ns  TB seq.                        Starting clock TB clock
 UVVM: ID_SEQUENCER_SUB                   0.0 ns  adxl345 model                  STOP condition detected
-UVVM: ID_SEQUENCER_SUB                 110.0 ns  TB seq.                        Activate async. reset
+UVVM: ID_SEQUENCER                     100.0 ns  TB seq.                        Activate async. reset
 UVVM: 
 UVVM: 
-UVVM: ID_LOG_HDR                       150.0 ns  TB seq.                        Reading device ID register
+UVVM: ID_LOG_HDR                       310.0 ns  TB seq.                        Verify communication with MM IF
 UVVM: -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-UVVM: ID_SEQUENCER_SUB                3860.0 ns  adxl345 model                  START condition detected
-UVVM: ID_SEQUENCER_SUB               50100.0 ns  adxl345 model                  Ack Address adxl345
-UVVM: ID_SEQUENCER_SUB               90100.0 ns  adxl345 model                  Register address: 00000000 detected.
-UVVM: ID_SEQUENCER_SUB               95100.0 ns  adxl345 model                  Ack Data adxl345
-UVVM: ID_SEQUENCER_SUB               98860.0 ns  adxl345 model                  RESTART condition detected
-UVVM: ID_SEQUENCER_SUB              145100.0 ns  adxl345 model                  Ack Address adxl345
-UVVM: ID_SEQUENCER_SUB              185100.0 ns  adxl345 model                  Read Device ID reg. of value: 11100101
-UVVM: ID_SEQUENCER_SUB              190100.0 ns  adxl345 model                  Master NACK detected
-UVVM: ID_SEQUENCER_SUB              193860.0 ns  adxl345 model                  STOP condition detected
+UVVM: ID_SEQUENCER                     310.0 ns  TB seq.                        Write I2C address and device ID address to MM IF addr_reg
+UVVM: ID_BFM                           345.0 ns  TB seq.                        avalon_mm_write(A:x"1", x"00000051") completed. 'MM IF Write transaction to addr_reg'
+UVVM: ID_BFM                           785.0 ns  TB seq.                        avalon_mm_check_response(A:x"1", x"00000051")=> OK, received data = x"51". 'MM IF transaction
+UVVM:                                                                           to verify correct value in addr_reg'
 UVVM: 
 UVVM: 
-UVVM: ID_LOG_HDR                    196380.0 ns  TB seq.                        Writing to device ID register
+UVVM: ID_LOG_HDR                       785.0 ns  TB seq.                        Read ADXL345 Device ID Register
 UVVM: -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-UVVM: ID_SEQUENCER_SUB              203860.0 ns  adxl345 model                  START condition detected
-UVVM: ID_SEQUENCER_SUB              250100.0 ns  adxl345 model                  Ack Address adxl345
-UVVM: ID_SEQUENCER_SUB              290100.0 ns  adxl345 model                  Register address: 00000000 detected.
-UVVM: ID_SEQUENCER_SUB              295100.0 ns  adxl345 model                  Ack Data adxl345
+UVVM: ID_BFM                           805.0 ns  TB seq.                        avalon_mm_write(A:x"0", x"00000001") completed. 'MM IF transaction to request I2C write
+UVVM:                                                                           transaction'
+UVVM: ID_SEQUENCER_SUB                3940.0 ns  adxl345 model                  START condition detected
+UVVM: ID_SEQUENCER_SUB               50180.0 ns  adxl345 model                  Ack Address adxl345
+UVVM: ID_SEQUENCER_SUB               90180.0 ns  adxl345 model                  Register address: 00000000 detected.
+UVVM: ID_SEQUENCER_SUB               95180.0 ns  adxl345 model                  Ack Data adxl345
+UVVM: ID_SEQUENCER_SUB               98940.0 ns  adxl345 model                  STOP condition detected
+UVVM: ID_BFM                        250825.0 ns  TB seq.                        avalon_mm_write(A:x"0", x"00000007") completed. 'MM IF transaction to request I2C read
+UVVM:                                                                           transaction'
+UVVM: ID_SEQUENCER_SUB              253940.0 ns  adxl345 model                  START condition detected
+UVVM: ID_SEQUENCER_SUB              300180.0 ns  adxl345 model                  Ack Address adxl345
+UVVM: ID_SEQUENCER_SUB              340180.0 ns  adxl345 model                  Read Device ID reg. of value: 11100101
+UVVM: ID_SEQUENCER_SUB              345180.0 ns  adxl345 model                  Master NACK detected
+UVVM: ID_SEQUENCER_SUB              348940.0 ns  adxl345 model                  STOP condition detected
+UVVM: ID_SEQUENCER                  500825.0 ns  TB seq.                        Check correct device ID
+UVVM: ID_BFM                        500865.0 ns  TB seq.                        avalon_mm_check_response(A:x"3", x"XXXXXXXX")=> OK, received data = x"XXXXXXXX". 'MM IF
+UVVM:                                                                           transaction to verify correct reveived value in read_reg'
 UVVM: 
-UVVM: ***  WARNING #1  ***
-UVVM:        335100 ns   adxl345 model
-UVVM:                    Device ID reg is read only!
 UVVM: 
-UVVM: ID_SEQUENCER_SUB              340100.0 ns  adxl345 model                  Ack Data adxl345
-UVVM: ID_SEQUENCER_SUB              343860.0 ns  adxl345 model                  STOP condition detected
-UVVM: 
-UVVM: 
-UVVM: ID_LOG_HDR                    346380.0 ns  TB seq.                        Setting and check Data Format register
+UVVM: ID_LOG_HDR                    500865.0 ns  TB seq.                        Set the ADXL345 resolution to 4g
 UVVM: -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-UVVM: ID_SEQUENCER_SUB              353860.0 ns  adxl345 model                  START condition detected
-UVVM: ID_SEQUENCER_SUB              400100.0 ns  adxl345 model                  Ack Address adxl345
-UVVM: ID_SEQUENCER_SUB              440100.0 ns  adxl345 model                  Register address: 00110001 detected.
-UVVM: ID_SEQUENCER_SUB              445100.0 ns  adxl345 model                  Ack Data adxl345
-UVVM: ID_SEQUENCER_SUB              485100.0 ns  adxl345 model                  Updated Data Format .reg. to: 00000010
-UVVM: ID_SEQUENCER_SUB              485100.0 ns  adxl345 model                  Setting accel. range to 8g
-UVVM: ID_SEQUENCER_SUB              490100.0 ns  adxl345 model                  Ack Data adxl345
-UVVM: ID_SEQUENCER_SUB              493860.0 ns  adxl345 model                  STOP condition detected
-UVVM: ID_SEQUENCER_SUB              503860.0 ns  adxl345 model                  START condition detected
-UVVM: ID_SEQUENCER_SUB              550100.0 ns  adxl345 model                  Ack Address adxl345
-UVVM: ID_SEQUENCER_SUB              590100.0 ns  adxl345 model                  Register address: 00110001 detected.
-UVVM: ID_SEQUENCER_SUB              595100.0 ns  adxl345 model                  Ack Data adxl345
-UVVM: ID_SEQUENCER_SUB              598860.0 ns  adxl345 model                  RESTART condition detected
-UVVM: ID_SEQUENCER_SUB              645100.0 ns  adxl345 model                  Ack Address adxl345
-UVVM: ID_SEQUENCER_SUB              685100.0 ns  adxl345 model                  Read Data Format .reg. of value: 00000010
-UVVM: ID_SEQUENCER_SUB              690100.0 ns  adxl345 model                  Master NACK detected
-UVVM: ID_SEQUENCER_SUB              693860.0 ns  adxl345 model                  STOP condition detected
+UVVM: ID_SEQUENCER                  500865.0 ns  TB seq.                        Write I2C address and address of Data Fromat register to MM IF addr_reg
+UVVM: ID_BFM                        500885.0 ns  TB seq.                        avalon_mm_write(A:x"1", x"00003151") completed. 'MM IF Write transaction to addr_reg'
+UVVM: ID_SEQUENCER                  500985.0 ns  TB seq.                        Write the value to be written to the Data Format register to the MM IF write_reg
+UVVM: ID_BFM                        501005.0 ns  TB seq.                        avalon_mm_write(A:x"2", x"00000001") completed. 'MM IF Write transaction to write_reg'
+UVVM: ID_BFM                        501125.0 ns  TB seq.                        avalon_mm_write(A:x"0", x"00000005") completed. 'MM IF transaction to request I2C write
+UVVM:                                                                           transaction'
+UVVM: ID_SEQUENCER_SUB              503940.0 ns  adxl345 model                  START condition detected
+UVVM: ID_SEQUENCER_SUB              550180.0 ns  adxl345 model                  Ack Address adxl345
+UVVM: ID_SEQUENCER_SUB              590180.0 ns  adxl345 model                  Register address: 00110001 detected.
+UVVM: ID_SEQUENCER_SUB              595180.0 ns  adxl345 model                  Ack Data adxl345
+UVVM: ID_SEQUENCER_SUB              635180.0 ns  adxl345 model                  Updated Data Format .reg. to: 00000001
+UVVM: ID_SEQUENCER_SUB              635180.0 ns  adxl345 model                  Setting accel. range to 4g
+UVVM: ID_SEQUENCER_SUB              640180.0 ns  adxl345 model                  Ack Data adxl345
+UVVM: ID_SEQUENCER_SUB              643940.0 ns  adxl345 model                  STOP condition detected
+UVVM: 
+UVVM: 
+UVVM: ID_LOG_HDR                    751125.0 ns  TB seq.                        Reading back ADXL345 accelerometer data registers
+UVVM: -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+UVVM: ID_SEQUENCER                  751125.0 ns  TB seq.                        Write I2C address and address of Accel. DATAX0 register to MM IF addr_reg
+UVVM: ID_BFM                        751145.0 ns  TB seq.                        avalon_mm_write(A:x"1", x"00003251") completed. 'MM IF Write transaction to addr_reg'
+UVVM: ID_BFM                        751165.0 ns  TB seq.                        avalon_mm_write(A:x"0", x"00000001") completed. 'MM IF transaction to request I2C write
+UVVM:                                                                           transaction'
+UVVM: ID_SEQUENCER_SUB              753940.0 ns  adxl345 model                  START condition detected
+UVVM: ID_SEQUENCER_SUB              800180.0 ns  adxl345 model                  Ack Address adxl345
+UVVM: ID_SEQUENCER_SUB              840180.0 ns  adxl345 model                  Register address: 00110010 detected.
+UVVM: ID_SEQUENCER_SUB              845180.0 ns  adxl345 model                  Ack Data adxl345
+UVVM: ID_SEQUENCER_SUB              848940.0 ns  adxl345 model                  STOP condition detected
+UVVM: ID_BFM                       1001185.0 ns  TB seq.                        avalon_mm_write(A:x"0", x"0000001B") completed. 'MM IF transaction to request I2C read
+UVVM:                                                                           transaction'
+UVVM: ID_SEQUENCER_SUB             1003940.0 ns  adxl345 model                  START condition detected
+UVVM: ID_SEQUENCER_SUB             1050180.0 ns  adxl345 model                  Ack Address adxl345
+UVVM: ID_SEQUENCER_SUB             1090180.0 ns  adxl345 model                  Read accel. data x0:  00000001
+UVVM: ID_SEQUENCER_SUB             1095180.0 ns  adxl345 model                  Master ACK detected
+UVVM: ID_SEQUENCER_SUB             1135180.0 ns  adxl345 model                  Read accel. data x1:  00000010
+UVVM: ID_SEQUENCER_SUB             1140180.0 ns  adxl345 model                  Master ACK detected
+UVVM: ID_SEQUENCER_SUB             1180180.0 ns  adxl345 model                  Read accel. data y0:  00000011
+UVVM: ID_SEQUENCER_SUB             1185180.0 ns  adxl345 model                  Master ACK detected
+UVVM: ID_SEQUENCER_SUB             1225180.0 ns  adxl345 model                  Read accel. data y1:  00000100
+UVVM: ID_SEQUENCER_SUB             1230180.0 ns  adxl345 model                  Master ACK detected
+UVVM: ID_SEQUENCER_SUB             1270180.0 ns  adxl345 model                  Read accel. data z0:  00000101
+UVVM: ID_SEQUENCER_SUB             1275180.0 ns  adxl345 model                  Master ACK detected
+UVVM: ID_SEQUENCER_SUB             1315180.0 ns  adxl345 model                  Read accel. data z1:  00000110
+UVVM: ID_SEQUENCER_SUB             1320180.0 ns  adxl345 model                  Master NACK detected
+UVVM: ID_SEQUENCER_SUB             1323940.0 ns  adxl345 model                  STOP condition detected
+UVVM: ID_BFM                       2501225.0 ns  TB seq.                        avalon_mm_check_response(A:x"3", x"0X0X0X0X")=> OK, received data = x"X0X0X0X". 'MM IF
+UVVM:                                                                           transaction to verify correct reveived value in read_reg(31 downto 0)'
+UVVM: ID_BFM                       2501265.0 ns  TB seq.                        avalon_mm_check_response(A:x"4", x"XXXX0X0X")=> OK, received data = x"XXXX0X0X". 'MM IF
+UVVM:                                                                           transaction to verify correct reveived value in read_reg(63 downto 32)'
 UVVM:      
 UVVM:      ====================================================================================================================================================================
 UVVM:      *** FINAL SUMMARY OF ALL ALERTS ***
@@ -164,7 +193,7 @@ UVVM:      =====================================================================
 UVVM:                                REGARDED   EXPECTED  IGNORED      Comment?
 UVVM:                NOTE         :      0         0         0         ok
 UVVM:                TB_NOTE      :      0         0         0         ok
-UVVM:                WARNING      :      1         1         0         ok
+UVVM:                WARNING      :      0         0         0         ok
 UVVM:                TB_WARNING   :      0         0         0         ok
 UVVM:                MANUAL_CHECK :      0         0         0         ok
 UVVM:                ERROR        :      0         0         0         ok
@@ -178,6 +207,6 @@ UVVM:
 UVVM:      
 UVVM: 
 UVVM: 
-UVVM: ID_LOG_HDR                    697380.0 ns  TB seq.                        SIMULATION COMPLETED
+UVVM: ID_LOG_HDR                   2502265.0 ns  TB seq.                        SIMULATION COMPLETED
 UVVM: -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-UVVM: ID_CLOCK_GEN                  697400.0 ns  TB seq.                        Stopping clock TB clock
+UVVM: ID_CLOCK_GEN                 2502280.0 ns  TB seq.                        Stopping clock TB clock

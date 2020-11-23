@@ -1,5 +1,0 @@
-UVVM: 
-UVVM: ***  WARNING #1  ***
-UVVM:        335100 ns   adxl345 model
-UVVM:                    Device ID reg is read only!
-UVVM: 

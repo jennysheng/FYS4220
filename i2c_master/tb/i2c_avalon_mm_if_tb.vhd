@@ -70,7 +70,7 @@ architecture tb of i2c_avalon_mm_if_tb is
 
   constant C_CTRL_REG_ADDR : unsigned(2 downto 0)          := "000";
   signal ctrl_reg_value    : std_logic_vector(31 downto 0) := (others => '0');
-  signal ctrl_reg   : std_logic_vector(31 downto 0) := (others => '0');
+  --signal ctrl_reg   : std_logic_vector(31 downto 0) := (others => '0');
   alias cmd                : std_logic is ctrl_reg_value(0);
   alias rnw                : std_logic is ctrl_reg_value(1);
   alias no_bytes           : std_logic_vector(2 downto 0) is ctrl_reg_value(4 downto 2);
