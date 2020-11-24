@@ -5,9 +5,10 @@
   <columns>
    <connections preferredWidth="143" />
    <irq preferredWidth="34" />
+   <export preferredWidth="552" />
   </columns>
  </systemtable>
- <library expandedCategories="Project/fys4220,Project,Library" />
+ <library expandedCategories="Project,Library" />
  <window width="1920" height="1020" x="0" y="0" />
  <generation synthesis="VHDL" block_symbol_file="0" />
 </preferences>

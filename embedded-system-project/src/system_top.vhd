@@ -1,7 +1,5 @@
 LIBRARY IEEE;
 USE ieee.std_logic_1164.ALL;
-
-
 ENTITY system_top IS
     PORT (
 
@@ -29,13 +27,13 @@ ARCHITECTURE top_level OF system_top IS
             led_pio_external_connection_export : OUT STD_LOGIC_VECTOR(9 DOWNTO 0); -- export
             interrupt_pio_external_connection_export : IN STD_LOGIC_VECTOR(2 DOWNTO 0) := (OTHERS => 'X'); -- export
             reset_reset_n : IN STD_LOGIC := 'X'; -- reset_n
-            i2c_avalon_mm_if_conduit_end_sda_export  : inout std_logic                    := 'X';             -- export
-			i2c_avalon_mm_if_conduit_end_scl_export  : inout std_logic                    := 'X'              -- export
+            i2c_avalon_mm_if_conduit_end_sda_export : INOUT STD_LOGIC := 'X'; -- export
+            i2c_avalon_mm_if_conduit_end_scl_export : INOUT STD_LOGIC := 'X' -- export
         );
     END COMPONENT nios2_system;
 BEGIN
-  --  sda <= 'Z';
-  --  scl <= 'Z';
+    --  sda <= 'Z';
+    --  scl <= 'Z';
 
     --set adxl345's i2c address to 0x53;
 
@@ -60,8 +58,8 @@ BEGIN
             led_pio_external_connection_export => led, --       led_pio_external_connection.export
             interrupt_pio_external_connection_export => irq_n_rr, -- interrupt_pio_external_connection.export
             reset_reset_n => arst_n, --                             reset.reset_n
-            i2c_avalon_mm_if_conduit_end_sda_export  => sda,  --  i2c_avalon_mm_if_conduit_end_sda.export
-			i2c_avalon_mm_if_conduit_end_scl_export  => scl   --  i2c_avalon_mm_if_conduit_end_scl.export
+            i2c_avalon_mm_if_conduit_end_sda_export => sda, --  i2c_avalon_mm_if_conduit_end_sda.export
+            i2c_avalon_mm_if_conduit_end_scl_export => scl --  i2c_avalon_mm_if_conduit_end_scl.export
         );
 
     END ARCHITECTURE;
