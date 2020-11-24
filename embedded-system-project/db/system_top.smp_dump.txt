@@ -1,4 +1,24 @@
 
+State Machine - |system_top|nios2_system:u0|i2c_avalon_mm_if:i2c_avalon_mm_if_0|state
+Name state.sWRITE_DATA state.sWAIT_STOP state.sWAIT_DATA state.sADDR state.sIDLE 
+state.sIDLE 0 0 0 0 0 
+state.sADDR 0 0 0 1 1 
+state.sWAIT_DATA 0 0 1 0 1 
+state.sWAIT_STOP 0 1 0 0 1 
+state.sWRITE_DATA 1 0 0 0 1 
+
+State Machine - |system_top|nios2_system:u0|i2c_avalon_mm_if:i2c_avalon_mm_if_0|i2c_master:submodel|state
+Name state.sSTOP state.sMACK state.sREAD state.sACK2 state.sWRITE state.sACK1 state.sADDR state.sSTART state.sIDLE 
+state.sIDLE 0 0 0 0 0 0 0 0 0 
+state.sSTART 0 0 0 0 0 0 0 1 1 
+state.sADDR 0 0 0 0 0 0 1 0 1 
+state.sACK1 0 0 0 0 0 1 0 0 1 
+state.sWRITE 0 0 0 0 1 0 0 0 1 
+state.sACK2 0 0 0 1 0 0 0 0 1 
+state.sREAD 0 0 1 0 0 0 0 0 1 
+state.sMACK 0 1 0 0 0 0 0 0 1 
+state.sSTOP 1 0 0 0 0 0 0 0 1 
+
 State Machine - |system_top|nios2_system:u0|nios2_system_cpu:cpu|nios2_system_cpu_cpu:cpu|nios2_system_cpu_cpu_nios2_oci:the_nios2_system_cpu_cpu_nios2_oci|nios2_system_cpu_cpu_debug_slave_wrapper:the_nios2_system_cpu_cpu_debug_slave_wrapper|nios2_system_cpu_cpu_debug_slave_tck:the_nios2_system_cpu_cpu_debug_slave_tck|DRsize
 Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
 DRsize.000 0 0 0 0 0 0 

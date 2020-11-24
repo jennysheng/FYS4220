@@ -44,6 +44,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "sda",
+					"strict" : false
+				},
+				{
+					"name" : "scl",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -72,11 +80,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "sw[9]",
+					"name" : "sw[8]",
 					"strict" : false
 				},
 				{
-					"name" : "sw[8]",
+					"name" : "sw[9]",
 					"strict" : false
 				},
 				{
