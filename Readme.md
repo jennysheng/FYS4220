@@ -128,7 +128,26 @@ e) What is the VHDL conditional statement that can be used to detect a rising ed
 
 rising_edge(clk);
 
+#Problem 7: A Nios-II embedded system 
+a) Why do the CPU have both a data master and data instruction interface?
 
+b) In what ways are the Nios II PIO module utilized in this problem?
+
+c) What is the purpose of the JTAG UART module?
+
+d) Why is it recommended to minimize the application code inside an interrupt service routine (ISR)?
+
+e) What is the I2C address of the ADXL345 when the ALT ADDRESS pin is grounded?
+
+f) How do you setup the ADXL345 to run in a I2C mode?
+
+g) What is the device ID of the ADXL345 and in which register of the ADXL345 is this value stored?
+
+h) What is the purpose of writing the driver functions read_from_i2c_device and write_to_i2c_device?
+
+i) Can you explain what operation the following statement results in?
+
+IOWR(I2C_AVALON_MM_IF_0_BASE,ADDR_REG, i2c_reg_addr << 8 | i2c_device_addr);
 
 
 
