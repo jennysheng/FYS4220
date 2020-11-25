@@ -987,9 +987,6 @@ void checkID(){
    402e0:	213f8004 	addi	r4,r4,-512
    402e4:	00404c40 	call	404c4 <printf>
 
-	//void write_to_i2c_device(alt_u8 i2c_device_addr, alt_u8 i2c_reg_addr,alt_u8 no_bytes,
-	// alt_u32 data);
-
 }
    402e8:	0001883a 	nop
    402ec:	e037883a 	mov	sp,fp
