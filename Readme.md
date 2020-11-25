@@ -128,26 +128,41 @@ e) What is the VHDL conditional statement that can be used to detect a rising ed
 
 rising_edge(clk);
 
-#Problem 7: A Nios-II embedded system 
+### Excercise 7: A Nios-II embedded system 
 a) Why do the CPU have both a data master and data instruction interface?
+a data master is  implemented on on-chip memory while data instruction interface in on submodels like switches, interrup_pio .... 
 
 b) In what ways are the Nios II PIO module utilized in this problem?
+write_I2c_... read_I2c_....
 
 c) What is the purpose of the JTAG UART module?
+to use UART communicate to the NIOS II module core
 
 d) Why is it recommended to minimize the application code inside an interrupt service routine (ISR)?
+ An ISR must perform very quickly to avoid slowing down the operation of the device and the operation of all lower-priority ISRs.(ref:https://www.sciencedirect.com/topics/engineering/interrupt-service-routine)
 
 e) What is the I2C address of the ADXL345 when the ALT ADDRESS pin is grounded?
+An alternate I2C address of 0x53 (followed by the R/W bit)
+can be chosen by grounding the ALT ADDRESS pin (Pin 12).(reference adxl datasheet page 18)
 
 f) How do you setup the ADXL345 to run in a I2C mode?
+With CS tied high to VDD I/O, the ADXL345 is in I2C mode(reference adxl datasheet page 18)
 
 g) What is the device ID of the ADXL345 and in which register of the ADXL345 is this value stored?
+With the ALT ADDRESS pin
+high, the 7-bit I2C address for the device is 0x1D, followed by
+the R/W bit. This translates to 0x3A for a write and 0x3B for a
+read. An alternate I2C address of 0x53 (followed by the R/W bit)
+can be chosen by grounding the ALT ADDRESS pin (Pin 12).
+This translates to 0xA6 for a write and 0xA7 for a read.(reference adxl datasheet page 18)
 
 h) What is the purpose of writing the driver functions read_from_i2c_device and write_to_i2c_device?
+is HAL library to communicate with the nio2 memory mapping io interface.
 
 i) Can you explain what operation the following statement results in?
 
 IOWR(I2C_AVALON_MM_IF_0_BASE,ADDR_REG, i2c_reg_addr << 8 | i2c_device_addr);
+write to avalon memory module at memory location atI2C_AVALON_MM_IF_0_BASE, at addr_reg concatnate the i2c register address with i2c_device address.
 
 
 
