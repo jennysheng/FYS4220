@@ -164,6 +164,20 @@ i) Can you explain what operation the following statement results in?
 IOWR(I2C_AVALON_MM_IF_0_BASE,ADDR_REG, i2c_reg_addr << 8 | i2c_device_addr);
 write to avalon memory module at memory location atI2C_AVALON_MM_IF_0_BASE, at addr_reg concatnate the i2c register address with i2c_device address.
 
+### Excercise  8: RTOS
+a) What is the purpose of using the putchar command in the first part of this problem?
 
+b) Using the putchar command for the first part of this problem should result in a result similar to what is shown below. Can you explain this behaviour?
 
+Hello from Task1
+Hello from Task2
+Hello fromHello from Task1
+ Task2
+Hello from Task2
+Hello from Task1
+c) What is the purpose of the semaphore used in the first part of this problem?
+
+d) What is the purpose of the semaphore used the interrupt routine of the second part of this problem, and how is it different from the use in the first part of the problem?
+
+e) What is the purpose of the message box used in the second part of this problem?
 
