@@ -439,8 +439,8 @@ architecture rtl of nios2_system is
 	signal mm_interconnect_0_sys_clk_timer_s1_write_ports_inv             : std_logic;                     -- mm_interconnect_0_sys_clk_timer_s1_write:inv -> sys_clk_timer:write_n
 	signal mm_interconnect_0_led_pio_s1_write_ports_inv                   : std_logic;                     -- mm_interconnect_0_led_pio_s1_write:inv -> led_pio:write_n
 	signal mm_interconnect_0_interrupt_pio_s1_write_ports_inv             : std_logic;                     -- mm_interconnect_0_interrupt_pio_s1_write:inv -> interrupt_pio:write_n
-	signal rst_controller_reset_out_reset_ports_inv                       : std_logic;                     -- rst_controller_reset_out_reset:inv -> [cpu:reset_n, i2c_avalon_mm_if_0:reset_n, led_pio:reset_n]
-	signal rst_controller_001_reset_out_reset_ports_inv                   : std_logic;                     -- rst_controller_001_reset_out_reset:inv -> [interrupt_pio:reset_n, jtag_uart:rst_n, sw_pio:reset_n, sys_clk_timer:reset_n, sysid:reset_n]
+	signal rst_controller_reset_out_reset_ports_inv                       : std_logic;                     -- rst_controller_reset_out_reset:inv -> [cpu:reset_n, led_pio:reset_n]
+	signal rst_controller_001_reset_out_reset_ports_inv                   : std_logic;                     -- rst_controller_001_reset_out_reset:inv -> [i2c_avalon_mm_if_0:reset_n, interrupt_pio:reset_n, jtag_uart:rst_n, sw_pio:reset_n, sys_clk_timer:reset_n, sysid:reset_n]
 
 begin
 
@@ -477,7 +477,7 @@ begin
 	i2c_avalon_mm_if_0 : component i2c_avalon_mm_if
 		port map (
 			clk        => clk_clk,                                                        --           clock.clk
-			reset_n    => rst_controller_reset_out_reset_ports_inv,                       --           reset.reset_n
+			reset_n    => rst_controller_001_reset_out_reset_ports_inv,                   --           reset.reset_n
 			read       => mm_interconnect_0_i2c_avalon_mm_if_0_avalon_slave_0_read,       --  avalon_slave_0.read
 			write      => mm_interconnect_0_i2c_avalon_mm_if_0_avalon_slave_0_write,      --                .write
 			chipselect => mm_interconnect_0_i2c_avalon_mm_if_0_avalon_slave_0_chipselect, --                .chipselect

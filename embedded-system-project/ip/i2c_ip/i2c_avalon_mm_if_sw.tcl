@@ -25,10 +25,10 @@ set_sw_property bsp_subdirectory drivers
 
 
 # Include driver source file(s): (c/c++ or assembly)
-add_sw_property c_source HAL/src/i2c_avalon_mm_if.c
+add_sw_property c_source hal/src/i2c_avalon_mm_if.c
 
 # Include driver header file(s):
-add_sw_property include_source HAL/inc/i2c_avalon_mm_if.h
+add_sw_property include_source hal/inc/i2c_avalon_mm_if.h
 
 # Interrupt properties:
 # set_sw_property isr_preemption_supported false

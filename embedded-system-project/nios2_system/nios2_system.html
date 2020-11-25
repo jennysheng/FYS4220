@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2020.11.24.16:44:00</td>
+    <td class="l">2020.11.25.13:17:13</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -156,8 +156,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slaveb">avalon_slave_0&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>00081020</td>
-    <td class="empty"></td>
+    <td class="addr"><span style="color:#989898">0x</span>00081040</td>
+    <td class="addr"><span style="color:#989898">0x</span>00081040</td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
@@ -169,7 +169,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>00081060</td>
+    <td class="addr"><span style="color:#989898">0x</span>00081080</td>
     <td class="empty"></td>
    </tr>
    <tr>
@@ -182,7 +182,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slaveb">avalon_jtag_slave&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>00081088</td>
+    <td class="addr"><span style="color:#989898">0x</span>000810a8</td>
     <td class="empty"></td>
    </tr>
    <tr>
@@ -195,7 +195,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>00081070</td>
+    <td class="addr"><span style="color:#989898">0x</span>00081090</td>
     <td class="empty"></td>
    </tr>
    <tr>
@@ -221,8 +221,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>00081050</td>
-    <td class="addr"><span style="color:#989898">0x</span>00081050</td>
+    <td class="addr"><span style="color:#989898">0x</span>00081070</td>
+    <td class="addr"><span style="color:#989898">0x</span>00081070</td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
@@ -234,7 +234,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>00081000</td>
+    <td class="addr"><span style="color:#989898">0x</span>00081020</td>
     <td class="empty"></td>
    </tr>
    <tr>
@@ -247,7 +247,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slaveb">control_slave&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>00081080</td>
+    <td class="addr"><span style="color:#989898">0x</span>000810a0</td>
     <td class="empty"></td>
    </tr>
   </table>
@@ -263,7 +263,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_sys_clk">sys_clk</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="49">cpu</td>
+      <td class="main" rowspan="53">cpu</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
@@ -314,7 +314,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="from">data_master&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
+      <td class="neighbor" rowspan="6">
        <a href="#module_i2c_avalon_mm_if_0">i2c_avalon_mm_if_0</a>
       </td>
      </tr>
@@ -322,6 +322,26 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="to">&#160;&#160;avalon_slave_0</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">instruction_master&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;avalon_slave_0</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">debug_reset_request&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;reset</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -1200,7 +1220,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">instSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='onchip_mem.s1' start='0x40000' end='0x65800' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='cpu.debug_mem_slave' start='0x80800' end='0x81000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='sw_pio.s1' start='0x81050' end='0x81060' type='altera_avalon_pio.s1' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='onchip_mem.s1' start='0x40000' end='0x65800' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='cpu.debug_mem_slave' start='0x80800' end='0x81000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='i2c_avalon_mm_if_0.avalon_slave_0' start='0x81040' end='0x81060' type='i2c_avalon_mm_if.avalon_slave_0' /&gt;&lt;slave name='sw_pio.s1' start='0x81070' end='0x81080' type='altera_avalon_pio.s1' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">faSlaveMapParam</td>
@@ -1208,7 +1228,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">dataSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='onchip_mem.s1' start='0x40000' end='0x65800' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='cpu.debug_mem_slave' start='0x80800' end='0x81000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='sys_clk_timer.s1' start='0x81000' end='0x81020' type='altera_avalon_timer.s1' /&gt;&lt;slave name='i2c_avalon_mm_if_0.avalon_slave_0' start='0x81020' end='0x81040' type='i2c_avalon_mm_if.avalon_slave_0' /&gt;&lt;slave name='sw_pio.s1' start='0x81050' end='0x81060' type='altera_avalon_pio.s1' /&gt;&lt;slave name='interrupt_pio.s1' start='0x81060' end='0x81070' type='altera_avalon_pio.s1' /&gt;&lt;slave name='led_pio.s1' start='0x81070' end='0x81080' type='altera_avalon_pio.s1' /&gt;&lt;slave name='sysid.control_slave' start='0x81080' end='0x81088' type='altera_avalon_sysid_qsys.control_slave' /&gt;&lt;slave name='jtag_uart.avalon_jtag_slave' start='0x81088' end='0x81090' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='onchip_mem.s1' start='0x40000' end='0x65800' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='cpu.debug_mem_slave' start='0x80800' end='0x81000' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='sys_clk_timer.s1' start='0x81020' end='0x81040' type='altera_avalon_timer.s1' /&gt;&lt;slave name='i2c_avalon_mm_if_0.avalon_slave_0' start='0x81040' end='0x81060' type='i2c_avalon_mm_if.avalon_slave_0' /&gt;&lt;slave name='sw_pio.s1' start='0x81070' end='0x81080' type='altera_avalon_pio.s1' /&gt;&lt;slave name='interrupt_pio.s1' start='0x81080' end='0x81090' type='altera_avalon_pio.s1' /&gt;&lt;slave name='led_pio.s1' start='0x81090' end='0x810A0' type='altera_avalon_pio.s1' /&gt;&lt;slave name='sysid.control_slave' start='0x810A0' end='0x810A8' type='altera_avalon_sysid_qsys.control_slave' /&gt;&lt;slave name='jtag_uart.avalon_jtag_slave' start='0x810A8' end='0x810B0' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">tightlyCoupledDataMaster0MapParam</td>
@@ -1440,14 +1460,26 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
-      <td class="neighbor" rowspan="2">
+      <td class="neighbor" rowspan="6">
        <a href="#module_cpu">cpu</a>
       </td>
       <td class="from">data_master&#160;&#160;</td>
-      <td class="main" rowspan="7">i2c_avalon_mm_if_0</td>
+      <td class="main" rowspan="11">i2c_avalon_mm_if_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;avalon_slave_0</td>
+     </tr>
+     <tr>
+      <td class="from">instruction_master&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;avalon_slave_0</td>
+     </tr>
+     <tr>
+      <td class="from">debug_reset_request&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -2838,11 +2870,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">id</td>
-        <td class="parametervalue">1</td>
+        <td class="parametervalue">0</td>
        </tr>
        <tr>
         <td class="parametername">timestamp</td>
-        <td class="parametervalue">1606232639</td>
+        <td class="parametervalue">1606306632</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -2863,11 +2895,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">ID</td>
-        <td class="parametervalue">1</td>
+        <td class="parametervalue">0</td>
        </tr>
        <tr>
         <td class="parametername">TIMESTAMP</td>
-        <td class="parametervalue">1606232639</td>
+        <td class="parametervalue">1606306632</td>
        </tr>
       </table>
      </td>
@@ -2876,8 +2908,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </div>
   <table class="blueBar">
    <tr>
-    <td class="l">generation took 0.00 seconds</td>
-    <td class="r">rendering took 0.08 seconds</td>
+    <td class="l">generation took 0.01 seconds</td>
+    <td class="r">rendering took 0.06 seconds</td>
    </tr>
   </table>
  </body>
