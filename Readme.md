@@ -164,6 +164,26 @@ i) Can you explain what operation the following statement results in?
 IOWR(I2C_AVALON_MM_IF_0_BASE,ADDR_REG, i2c_reg_addr << 8 | i2c_device_addr);
 write to avalon memory module at memory location atI2C_AVALON_MM_IF_0_BASE, at addr_reg concatnate the i2c register address with i2c_device address.
 
+### Excercise  8: RTOS
+a) What is the purpose of using the putchar command in the first part of this problem?
+increase the process running time 
 
+b) Using the putchar command for the first part of this problem should result in a result similar to what is shown below. Can you explain this behaviour?
+
+Hello from Task1
+Hello from Task2
+Hello fromHello from Task1
+ Task2
+Hello from Task2
+Hello from Task1
+the process is being terminated and rerunned because the processed is not synchronized by either semaphore or wait notify (something similar in java).
+c) What is the purpose of the semaphore used in the first part of this problem?
+Using semaphores to protect shared resources.
+
+d) What is the purpose of the semaphore used the interrupt routine of the second part of this problem, and how is it different from the use in the first part of the problem?
+controls the access to this resource.
+
+e) What is the purpose of the message box used in the second part of this problem?
+The message box is a special memory location that one or more tasks can use to transfer data or more generally for synchronization.
 
 
