@@ -1,5 +1,5 @@
 Flow report for system_top
-Wed Nov 25 13:20:00 2020
+Thu Nov 26 12:35:28 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov 25 13:19:52 2020       ;
+; Flow Status                        ; Successful - Thu Nov 26 12:35:21 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; system_top                                  ;
 ; Top-level Entity Name              ; system_top                                  ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,498 / 49,760 ( 5 % )                      ;
-;     Total combinational functions  ; 2,279 / 49,760 ( 5 % )                      ;
+; Total logic elements               ; 2,496 / 49,760 ( 5 % )                      ;
+;     Total combinational functions  ; 2,281 / 49,760 ( 5 % )                      ;
 ;     Dedicated logic registers      ; 1,430 / 49,760 ( 3 % )                      ;
 ; Total registers                    ; 1430                                        ;
 ; Total pins                         ; 29 / 360 ( 8 % )                            ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/25/2020 13:18:39 ;
+; Start date & time ; 11/26/2020 12:34:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; system_top          ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------------+---------------+--------------+------------+
 ; Assignment Name                     ; Value                                                          ; Default Value ; Entity Name  ; Section Id ;
 +-------------------------------------+----------------------------------------------------------------+---------------+--------------+------------+
-; COMPILER_SIGNATURE_ID               ; 154027275522015.160630671906744                                ; --            ; --           ; --         ;
+; COMPILER_SIGNATURE_ID               ; 154027275522015.160639044913212                                ; --            ; --           ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                             ; --            ; --           ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                              ; --            ; --           ; --         ;
 ; MISC_FILE                           ; nios2_system/synthesis/../nios2_system.cmp                     ; --            ; --           ; --         ;
@@ -90,7 +90,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                   ; --            ; --           ; --         ;
 ; SLD_FILE                            ; nios2_system/synthesis/nios2_system.regmap                     ; --            ; --           ; --         ;
 ; SLD_FILE                            ; nios2_system/synthesis/nios2_system.debuginfo                  ; --            ; --           ; --         ;
-; SLD_INFO                            ; QSYS_NAME nios2_system HAS_SOPCINFO 1 GENERATION_ID 1606306632 ; --            ; nios2_system ; --         ;
+; SLD_INFO                            ; QSYS_NAME nios2_system HAS_SOPCINFO 1 GENERATION_ID 1606390171 ; --            ; nios2_system ; --         ;
 ; SOPCINFO_FILE                       ; nios2_system/synthesis/../../nios2_system.sopcinfo             ; --            ; --           ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                             ; --            ; --           ; --         ;
 +-------------------------------------+----------------------------------------------------------------+---------------+--------------+------------+
@@ -101,11 +101,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:41     ; 1.0                     ; 4922 MB             ; 00:01:01                           ;
-; Fitter               ; 00:00:22     ; 1.5                     ; 5696 MB             ; 00:00:34                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4705 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:07     ; 1.9                     ; 4870 MB             ; 00:00:10                           ;
-; Total                ; 00:01:14     ; --                      ; --                  ; 00:01:49                           ;
+; Analysis & Synthesis ; 00:00:40     ; 1.0                     ; 4923 MB             ; 00:01:02                           ;
+; Fitter               ; 00:00:21     ; 1.4                     ; 5699 MB             ; 00:00:32                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4705 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.9                     ; 4868 MB             ; 00:00:09                           ;
+; Total                ; 00:01:12     ; --                      ; --                  ; 00:01:47                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

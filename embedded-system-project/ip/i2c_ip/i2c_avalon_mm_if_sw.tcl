@@ -17,7 +17,7 @@ set_sw_property version 1.0
 set_sw_property min_compatible_hw_version 1.0
 
 # Specify supported BSP(Board Support Package) types:
-add_sw_property supported_bsp_type hal
+add_sw_property supported_bsp_type HAL
 #add_sw_property supported_bsp_type ucosii
 
 # Location in generated BSP that sources will be copied into
@@ -25,10 +25,10 @@ set_sw_property bsp_subdirectory drivers
 
 
 # Include driver source file(s): (c/c++ or assembly)
-add_sw_property c_source hal/src/i2c_avalon_mm_if.c
+add_sw_property c_source HAL/src/i2c_avalon_mm_if.c
 
 # Include driver header file(s):
-add_sw_property include_source hal/inc/i2c_avalon_mm_if.h
+add_sw_property include_source HAL/inc/i2c_avalon_mm_if.h
 
 # Interrupt properties:
 # set_sw_property isr_preemption_supported false
