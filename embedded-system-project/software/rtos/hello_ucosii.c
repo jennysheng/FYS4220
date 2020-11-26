@@ -30,95 +30,104 @@
 #include <stdio.h>
 #include "includes.h"
 #include <string.h>
+#include "acc.h"
+#include <system.h>
+#include <i2c_avalon_mm_if.h>
+#include <altera_avalon_pio_regs.h>
+#include <sys/alt_irq.h>
+#include "unistd.h"
+#include <io.h>
+
+
 
 /* Definition of Task Stacks */
 #define   TASK_STACKSIZE       2048
 OS_STK task1_stk[TASK_STACKSIZE];
 OS_STK task2_stk[TASK_STACKSIZE];
-OS_EVENT *shared_jtag_sem;
+OS_EVENT *key1pressed;
+OS_EVENT *swTime;
 
 /* Definition of Task Priorities */
 
-#define TASK1_PRIORITY      1
-#define TASK2_PRIORITY      2
+#define TASK1_PRIORITY      	 1// check ISR key1
+#define TASK2_PRIORITY           2
 
-/* Prints "Hello World" and sleeps for three seconds */
+/*The position or value of the slide swithces will be loaded when KEY1 is pressed
+ * (ext_ena_n in the VHDL design). When pressed, this key will trigger the interrupt routine.
+ *  To decrease the time spent in the interrupt routine, you will use a semaphore to synchronize
+ *  ?? the interrupt event with another task that checks the interrupt condition and performs
+ *   the required operation. This task will use the value of the slides swithces to calculate
+ *   the new time interval for the readout of the accelerometer. The result will then be sent to
+ *   another task through a message mailbox. The task receiving the message is the tasks that reads
+ *   out the accelerometer. The value received will be used to set a new timeout value for the
+ *   OSMBoxPend function that is used to receive the message. The intertask communication is
+ *   illustrated in figure 97
+
+ */
 void task1(void* pdata) {
 
 	int t_start;
 	int t_end;
 	int t_prev = 0;
 	INT8U error_code = OS_NO_ERR;
-	//Declare a pointer of type OS_EVENT.
 
+	INT8U sw;
+	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(INTERRUPT_PIO_BASE, 0x7); //enable 3 interrupts input key1 and sw and led
 	while (1) {
 		t_start = OSTimeGet();
-		char text1[] = "Hello from Task1\n";
-		int i;
-		OSSemPend(shared_jtag_sem, 0, &error_code);
-		for (i = 0; i < strlen(text1); i++) {
-			putchar(text1[i]);
-		}
+
+		if (OSSemAccept(key1pressed))
+			OSSemPend(key1pressed, 0, &error_code);
+		sw = 50 * IORD(SW_PIO_BASE, 0) & 0x0F;
+
 		t_end = OSTimeGet();
 		printf("T1:(Start, END, Ex.T.,P): (%d, %d, %d,%d)\n", t_start, t_end,
 				t_end - t_start, t_start - t_prev);
-		OSSemPost(shared_jtag_sem);
+		OSSemPost(key1pressed);
+		OSMboxPost(swTime, (void*) &sw);
 		t_prev = t_start;
-		OSTimeDlyHMSM(0, 0, 0, 20);
+
+		//	OSTimeDly(sw); // delay switch time.
 	}
 }
 
-/* Prints "Hello World" and sleeps for three seconds */
 void task2(void* pdata) {
 	int t_start;
 	int t_end;
 	int t_prev = 0;
+	INT8U timeout=0;
+	INT8U err;
 	INT8U error_code = OS_NO_ERR;
-	//Declare a pointer of type OS_EVENT.
+init();
 
+	//Declare a pointer of type OS_EVENT.
 
 	while (1) {
 		t_start = OSTimeGet();
-		char text2[] = "Hello from Task2\n";
-		int i;
-		OSSemPend(shared_jtag_sem, 0, &error_code);
-		for (i = 0; i < strlen(text2); i++) {
-			putchar(text2[i]);
-		}
+		OSSemPend(key1pressed, 0, &error_code);
+
 		t_end = OSTimeGet();
 		printf("T2:(Start, END, Ex.T.,P): (%d, %d, %d,%d)\n", t_start, t_end,
 				t_end - t_start, t_start - t_prev);
-		OSSemPost(shared_jtag_sem);
-		t_prev = t_start;
-		OSTimeDlyHMSM(0, 0, 0, 4);
+	     checkID();
+	     readXYZ();
+		if (OSMboxPend(swTime, timeout, &err)) {
+			readXYZ();
+			OSSemPost(key1pressed);
+			t_prev = t_start;
+			OSTimeDly(swTime);
+		}
 	}
 }
 /* The main function creates two task and starts multi-tasking */
 int main(void) {
 
-	printf("MicroC/OS-II Licensing Terms\n");
-	printf("============================\n");
-	printf(
-			"Micrium\'s uC/OS-II is a real-time operating system (RTOS) available in source code.\n");
-	printf("This is not open-source software.\n");
-	printf(
-			"This RTOS can be used free of charge only for non-commercial purposes and academic projects,\n");
-	printf(
-			"any other use of the code is subject to the terms of an end-user license agreement\n");
-	printf(
-			"for more information please see the license files included in the BSP project or contact Micrium.\n");
-	printf(
-			"Anyone planning to use a Micrium RTOS in a commercial product must purchase a commercial license\n");
-	printf("from the owner of the software, Silicon Laboratories Inc.\n");
-	printf("Licensing information is available at:\n");
-	printf("Phone: +1 954-217-2036\n");
-	printf("Email: sales@micrium.com\n");
-	printf("URL: www.micrium.com\n\n\n");
-
 	//create semaphores in the main() function before starting the multitasking system,
 	//and initialize to 1. That is, the semaphore is available from start.
 	//If initialize to 0, the semaphore is not available from start.
-	shared_jtag_sem = OSSemCreate(1);
+	key1pressed = OSSemCreate(1);
+	altera_nios2_gen2_irq_init();	//enable internal interrupt
+	//init_interrupt_pio();
 
 	OSTaskCreateExt(task1,
 	NULL, (void *) &task1_stk[TASK_STACKSIZE - 1],
@@ -137,6 +146,7 @@ int main(void) {
 	//void OSSemPend(OS_EVENT *pevent, INT16U timeout, INT8U *err);
 
 	//INT8U OSSemPost(OS_EVENT *pevent);
+
 	OSStart();
 	return 0;
 }
