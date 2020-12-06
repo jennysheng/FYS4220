@@ -8,9 +8,9 @@ Problem 3: < completed >
 Problem 4: < completed >
 Embedded system project
 Problem 5: < completed >
-Problem 6: < started >
-Problem 7: < started>
-Problem 8: < not started | started | completed >
+Problem 6: < completed >
+Problem 7: < completed>
+Problem 8: < completed >
 Answers to assignment questions
 Introductory assignment
 Exercise 1: Your first FPGA project
