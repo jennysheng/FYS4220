@@ -61,7 +61,14 @@ l) What happens when you press the push button KEY1 to start the counter, and ca
 without edge detection the key1 kan push a lot of clock cycles which cause the number increase very fast, after the edge detection , the number will increment one by one.
 
 Excercise 4: Synchronization and Edge detection.
-a) What is the purpose of synchronization registers and when do you need to use them? When sampling a signal from an asynchronous domain (e.g. a button push) or a signal crossing a clock domain, it is required to synchronize the signal to avoid a metastable condition.
+a) What is the purpose of synchronization registers and when do you need to use them? When sampling a signal from an asynchronous domain (e.g. a button push) or a signal crossing a clock domain, it is required to synchronize the signal to avoid a metastable condition. In non-synchronous systems, if the asynchronous input signals violate a
+flipflop’s timing requirements, the output of the flipflop can become
+metastable. Metastable outputs oscillate or hover between high and low
+states for a brief period of time, which can cause system failure. Therefore,
+you must analyze the metastability characteristics of a device to
+determine the reliability of a non-synchronous design. In synchronous
+systems, the input signals always meet the flipflop’s timing requirements;
+therefore, metastability does not occur.(https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/an/an042.pdf?GSA_pos=1&WT.oss_r=1&WT.oss=metastability%20application%20note)
 
 Excercise 5: I2C state machine.
 a) Can you identify any limitations with the simulation approach used in this problem? That is, is there any functionality you are not able to fully verify, and do you have any suggestions for how these limitations can be overcome? slave address is predefined, in phycial board, they should be responded by the slave. test with a physical board.
