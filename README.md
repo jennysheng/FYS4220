@@ -13,7 +13,9 @@ Problem 7: < completed>
 Problem 8: < completed >
 Answers to assignment questions
 Introductory assignment
+
 Exercise 1: Your first FPGA project
+
 a) What is the meaning of the warning messages in the compilation report and why can we choose to ignore them at this stage? when we have a process, there will be a system clock signal to control the process, the clock signal is not defined in our case.
 
 b) What is the purpose of the entity and architecture description? entity is the pin mapping input and output with the physical board, architecture is to declare funtionality of the program. c) What is the purpose of the Tcl file used in this problem? physical pin mapping to the chip.
